@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
         <div className="App mdc-typography main-body">
           <Header />
-          <Route path="/" exact component={Landing} />
+          <Route path="/" component={Landing} />
           {/*<Route path="/tour/" component={Tour} />*/}
           {/*<Route path="/store/" component={Store} />*/}
           {/*<Route path="/contact/" component={Contact} />*/}

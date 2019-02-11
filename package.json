@@ -2,6 +2,7 @@
   "name": "rope-and-ladder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://olivia-leach.github.io/rope-and-ladder/",
   "dependencies": {
     "@material/react-button": "^0.8.0",
     "@material/textfield": "^0.43.0",
@@ -21,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +34,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
