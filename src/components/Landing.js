@@ -6,7 +6,6 @@ class Landing extends Component {
     render() {
         return (
             <Fragment>
-                <div className="hero landing" />
                 <div className='container main-body'>
                     <Email />
                 </div>
