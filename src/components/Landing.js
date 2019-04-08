@@ -20,7 +20,6 @@ class Landing extends Component {
                         <div className='flex flex-center'>
                             <img className="landing album-art" src={Hero} />
                         </div>
-                        <div className="stripe" />
                         <Email />
                     </div>
                 </div>

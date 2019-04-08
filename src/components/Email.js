@@ -75,6 +75,7 @@ class Email extends Component {
     render() {
         return (
         <div className='email-container'>
+            <div className='lines' />
             <div className='flex flex-center'>
                 <img className='sign-up' src={Signup} />
             </div>
