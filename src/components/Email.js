@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MDCTextField } from '@material/textfield/index';
 // import { MDCRipple } from '@material'
 import "../styles/Email.scss";
-import Hero from '../Cover-Border.jpg'
+import Signup from '../signup.png'
 
 class Email extends Component {
     constructor(props) {
@@ -73,28 +73,41 @@ class Email extends Component {
     }
 
     render() {
-        return <div className="landing-container flex">
-        <img className="landing album-art" src={Hero} />
+        return (
         <div className='email-container'>
-            <h1 className="mdc-typography--headline4">Stay updated.</h1>
+            <div className='flex flex-center'>
+                <img className='sign-up' src={Signup} />
+            </div>
+            {/*<h1 className="mdc-typography--headline4 text-center">SIGN UP TO RECEIVE ALBUM RELEASE UPDATES</h1>*/}
+            <div className='flex flex-center input-container'>
             <div>
                 <div className="mdc-text-field">
-                <input type="email" id="my-text-field" className="mdc-text-field__input" valid={this.state.emailValid} onChange={this.onEmailChange} />
-                <label className="mdc-floating-label" htmlFor="my-text-field">
-                    Email
+                <input type="text" name='name' id="name-field" className="mdc-text-field__input" valid={!!this.state.name} onChange={this.onTextChange} />
+                <label className="mdc-floating-label" htmlFor="name-field">
+                    NAME
                 </label>
                 <div className="mdc-line-ripple" />
                 </div>
             </div>
-            <button className="mdc-button mdc-button--outlined" disabled={!this.state.emailValid || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
+            <div>
+                <div className="mdc-text-field">
+                <input type="email" name='email' id="email-field" className="mdc-text-field__input" valid={this.state.emailValid} onChange={this.onTextChange} />
+                <label className="mdc-floating-label" htmlFor="email-field">
+                    EMAIL
+                </label>
+                <div className="mdc-line-ripple" />
+                </div>
+            </div>
+            <button className="mdc-button mdc-button--raised" disabled={!this.state.emailValid || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
                 {this.state.submitting ?
                     <span className="mdc-button__label">Signing up...</span>
                 :
                 <span className="mdc-button__label">
-                    {this.state.submitted ? 'Thank you' : 'Submit'}</span>}
+                    {this.state.submitted ? 'Thank you' : 'Subscribe'}</span>}
             </button>
             </div>
-          </div>;
+            </div>
+        )
     }
 }
 
