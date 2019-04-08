@@ -13,6 +13,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App mdc-typography main-body">
+          <div className='lines' />
           <Header />
           <Route path="/" component={Landing} />
           {/*<Route path="/tour/" component={Tour} />*/}
