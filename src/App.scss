@@ -1,3 +1,6 @@
+$break-mobile: 500px;
+$break-small: 767px;
+
 .App {
   // background-color: #282c34;
   // background-color: #243135;
@@ -49,6 +52,9 @@
   padding-top: 50px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: $break-mobile) {
+    padding-top: 30px;
+  }
 }
 
 .main-body {
@@ -107,6 +113,9 @@ $orange: rgb(221, 125, 69);
 
 .logo {
   height: 100px;
+  @media screen and (max-width: $break-mobile) {
+    height: 120px;
+  }
 }
 
 .coming-soon {
@@ -134,5 +143,36 @@ $orange: rgb(221, 125, 69);
 
   input {
     padding: 0 0 0 10px;
+  }
+}
+
+@media screen and (max-width: $break-small) {
+  .sign-up {
+    height: 10px;
+  }
+  
+  .input-container {
+    flex-direction: column;
+
+      > div, button {
+        margin: .4rem;
+      }
+
+      > div, .mdc-text-field, button {
+        @media screen and (max-width: $break-mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: $break-mobile) {
+  .coming-soon {
+    height: 40px;
+  }
+
+  .email-container {
+    margin-top: -200px;
+    padding-top: 10rem;
   }
 }
