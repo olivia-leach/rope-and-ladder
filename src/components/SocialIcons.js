@@ -8,17 +8,17 @@ class SocialIcons extends Component {
         return (
             <ul className="social-list">
                 <li className="facebook">
-                    <a href="https://www.facebook.com/RopeAndLadder" target="_blank" className="social-icon">
+                    <a href="https://www.instagram.com/RopeAndLaddermusic/" target="_blank" className="social-icon">
                         <img src={Instagram} />
                     </a>
                 </li>
                 <li className="instagram">
-                    <a href="https://www.instagram.com/RopeAndLaddermusic/" target="_blank" className="social-icon">
+                    <a href="https://www.twitter.com/Rope_and_Ladder" target="_blank" className="social-icon">
                         <img src={Twitter} />
                     </a>
                 </li>
                 <li className="twitter">
-                    <a href="https://www.twitter.com/Rope_and_Ladder" target="_blank" className="social-icon">
+                    <a href="https://www.facebook.com/RopeAndLadder" target="_blank" className="social-icon">
                         <img src={Facebook} />
                     </a>
                 </li>
