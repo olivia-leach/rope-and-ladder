@@ -20,7 +20,7 @@ $break-small: 767px;
   z-index: 2;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -58,12 +58,6 @@ $break-small: 767px;
   @media screen and (max-width: $break-mobile) {
     padding-top: 30px;
   }
-}
-
-.main-body {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
 }
 
 $orange: rgb(221, 125, 69);
@@ -106,11 +100,19 @@ $orange: rgb(221, 125, 69);
 .email-container {
   margin-top: -110px;
   background-image: url(./stripe.png);
-  padding: 5rem 1rem 3rem;
+  padding: 5rem 1rem 1rem;
   background-size: cover;
   background-position: center center;
   width: calc(100% - 2rem);
   flex-grow: 1;
+  position: relative;
+
+  footer {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .sign-up {
@@ -179,7 +181,7 @@ $orange: rgb(221, 125, 69);
 
   .email-container {
     margin-top: -200px;
-    padding-top: 10rem;
+    padding-top: 9rem;
   }
 }
 
@@ -188,10 +190,25 @@ $orange: rgb(221, 125, 69);
   justify-content: center;
   padding: 0;
   margin-bottom: 0;
+  margin-top: 1rem;
   li {
-    margin: 1rem;
+    margin: .5rem;
     img {
-      height: 18px;
+      height: 15px;
+      transition: .25s ease-in-out all;
+    }
+    &:hover {
+      img {
+        filter: brightness(200%);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
     }
   }
+}
+
+.main-body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }

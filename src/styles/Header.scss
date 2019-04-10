@@ -1,6 +1,9 @@
+$break-mobile: 500px;
+$break-small: 767px;
+
 .main-header {
-    padding-top: 3rem;
-    position: fixed;
+    padding-top: 1rem;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -28,8 +31,17 @@ li {
 
 .main-menu.social {
     float: right;
-    margin-right: 4rem;
-    display: none;
+    margin-right: 10%;
+    ul {
+        margin: 0;
+    }
+    li {
+        padding: 0;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin-right: 1rem;
+      }
 }
 
 .main-menu {
@@ -44,11 +56,6 @@ li {
 .main-menu li {
     padding: 1rem;
     text-transform: uppercase;
-}
-
-.container {
-    margin: 0 auto;
-    position: relative;
 }
 
 .logo-container {
