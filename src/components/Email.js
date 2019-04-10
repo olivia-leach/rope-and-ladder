@@ -9,15 +9,16 @@ class Email extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            emailValid: false
+            email: '',
+            name: '',
         }
     }
 
-    onEmailChange = (e) => {
-        const { value } = e.target
+    onTextChange = (e) => {
+        const { value, name } = e.target
         this.setState({
-            email: value,
-            emailValid: value.includes('@') && value.includes('.'),
+            [name]: value,
+            // emailValid: value.includes('@') && value.includes('.'),
             submitted: false,
         })
     }
@@ -37,11 +38,11 @@ class Email extends Component {
      // get all data in form and return object
     getFormData() {
         // add form-specific values into the data
-        const data = { email: this.state.email }
+        const data = { email: this.state.email, name: this.state.name }
         data.formDataNameOrder = JSON.stringify(data);
-        data.formGoogleSheetName = 'emails' // default sheet name
+        // data.formGoogleSheetName = 'emails' // default sheet name
 
-        console.log(data);
+        // console.log(data);
         return data;
     }
 
@@ -50,12 +51,16 @@ class Email extends Component {
         this.setState({ submitting: true })
         const data = this.getFormData();         // get the values submitted in the form
     
+        let encoded = Object.keys(data).map(function(k) {
+            return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+        }).join('&')
+
         const url = 'https://script.google.com/macros/s/AKfycbx0hWsJBWiSzDOIAzJldsRg0wdj7NwwtFO6vFNDS_cqbKAbvtQe/exec'
         const xhr = new XMLHttpRequest();
         xhr.open('POST', url);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(encoded);
         xhr.onreadystatechange = function() {
-            console.log(xhr.status, xhr.statusText)
             console.log(xhr.responseText)
             if (xhr.status === 200) {
             this.setState({
@@ -67,13 +72,11 @@ class Email extends Component {
         }.bind(this);
     
         // url encode form data for sending as post data
-        let encoded = Object.keys(data).map(function(k) {
-            return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-        }).join('&')
-        xhr.send(encoded);
     }
 
     render() {
+        const emailValid = this.state.email.includes('@') && this.state.email.includes('.')
+        const canSubmit = !!this.state.name && emailValid
         return (
         <div className='email-container'>
             <div className='flex flex-center'>
@@ -92,14 +95,14 @@ class Email extends Component {
             </div>
             <div>
                 <div className="mdc-text-field">
-                <input type="email" name='email' id="email-field" className="mdc-text-field__input" valid={this.state.emailValid} onChange={this.onTextChange} />
+                <input type="email" name='email' id="email-field" className="mdc-text-field__input" valid={canSubmit} onChange={this.onTextChange} />
                 <label className="mdc-floating-label" htmlFor="email-field">
                     EMAIL
                 </label>
                 <div className="mdc-line-ripple" />
                 </div>
             </div>
-            <button className="mdc-button mdc-button--raised" disabled={!this.state.emailValid || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
+            <button className="mdc-button mdc-button--raised" disabled={!canSubmit || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
                 {this.state.submitting ?
                     <span className="mdc-button__label">Signing up...</span>
                 :
