@@ -7,6 +7,7 @@ class Footer extends Component {
     return (
       <footer>
         <SocialIcons />
+        <p className='copyright'>Copyright 2019 - Rope and Ladder. All rights reserved</p>
       </footer>
     );
   }

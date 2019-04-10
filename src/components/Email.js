@@ -3,6 +3,7 @@ import { MDCTextField } from '@material/textfield/index';
 // import { MDCRipple } from '@material'
 import "../styles/Email.scss";
 import Signup from '../signup.png'
+import Footer from './Footer'
 
 class Email extends Component {
     constructor(props) {
@@ -106,6 +107,7 @@ class Email extends Component {
                     {this.state.submitted ? 'Thank you' : 'Subscribe'}</span>}
             </button>
             </div>
+            <Footer />
             </div>
         )
     }

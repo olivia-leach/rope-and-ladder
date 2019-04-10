@@ -19,7 +19,6 @@ class App extends Component {
           {/*<Route path="/tour/" component={Tour} />*/}
           {/*<Route path="/store/" component={Store} />*/}
           {/*<Route path="/contact/" component={Contact} />*/}
-          {/*<Footer />*/}
         </div>
       </Router>
     )

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Instagram from '../instagram.png'
+import Twitter from '../twitter.png'
+import Facebook from '../fb.png'
 
 class SocialIcons extends Component {
     render() {
@@ -6,17 +9,17 @@ class SocialIcons extends Component {
             <ul className="social-list">
                 <li className="facebook">
                     <a href="https://www.facebook.com/RopeAndLadder" target="_blank" className="social-icon">
-                        <i className="fab fa-facebook-f" />
+                        <img src={Instagram} />
                     </a>
                 </li>
                 <li className="instagram">
                     <a href="https://www.instagram.com/RopeAndLaddermusic/" target="_blank" className="social-icon">
-                        <i className="fab fa-instagram" />
+                        <img src={Twitter} />
                     </a>
                 </li>
                 <li className="twitter">
                     <a href="https://www.twitter.com/Rope_and_Ladder" target="_blank" className="social-icon">
-                        <i className="fab fa-twitter" />
+                        <img src={Facebook} />
                     </a>
                 </li>
                 {/*<li className="youtube">
