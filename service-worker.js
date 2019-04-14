@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rope-and-ladder/precache-manifest.6f615a5c7761f1085f873338c86d7b44.js"
+  "/rope-and-ladder/precache-manifest.a9ae4b40951176a0a0002404340acf35.js"
 );
 
 workbox.clientsClaim();
