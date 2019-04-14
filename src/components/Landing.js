@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Email from "./Email";
 import "../styles/Landing.scss";
-import Hero from '../album.png'
+import Hero from '../album-sm-2.png'
 import Logo from '../logo.png'
 import ComingSoon from '../comingsoon.png'
 
