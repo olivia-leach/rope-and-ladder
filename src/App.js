@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Landing from './components/Landing'
@@ -15,10 +15,10 @@ class App extends Component {
         <div className="App mdc-typography main-body">
           <div className='lines' />
           <Header />
-          <Route path="/" component={Landing} />
-          {/*<Route path="/tour/" component={Tour} />*/}
-          {/*<Route path="/store/" component={Store} />*/}
-          {/*<Route path="/contact/" component={Contact} />*/}
+          <Switch>
+            <Route path="/" exact component={Landing} />
+            <Route render={() => <Redirect to="/" />} />
+          </Switch>
         </div>
       </Router>
     )
