@@ -2,7 +2,7 @@
   "name": "rope-and-ladder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olivia-leach.github.io/rope-and-ladder/",
+  "homepage": "https://ropeandladder.com/",
   "dependencies": {
     "@material/react-button": "^0.8.0",
     "@material/textfield": "^0.43.0",
