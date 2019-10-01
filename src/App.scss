@@ -1,5 +1,6 @@
 $break-mobile: 500px;
 $break-small: 767px;
+$break-medium: 1000px;
 
 html, body {
   background-color: #2B383D;
@@ -21,7 +22,7 @@ html, body {
   background-image: url(./lines.png);
   background-size: auto 100%;
   background-position: center;
-  z-index: 2;
+  z-index: 25;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -54,13 +55,13 @@ html, body {
 
 .landing-container {
   display: flex;
-  padding-top: 50px;
+  padding-top: 170px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
   @media screen and (max-width: $break-mobile) {
-    padding-top: 30px;
+    padding-top: 220px;
   }
 }
 
@@ -208,4 +209,54 @@ $orange: rgb(221, 125, 69);
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+.other-pages-container {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+
+  // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  // background-color: #1F282C;
+  // padding-top: 180px;
+  // width: 100%;
+  // transform: translateY(100vh);
+
+  // height: 0;
+  // overflow: hidden;
+
+  // transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1) all;
+  // opacity: 0;
+  // animation: 0.5s slideUp cubic-bezier(0.68, -0.55, 0.265, 1);
+  // animation-fill-mode: forwards;
+
+  // @media screen and (max-width: $break-small) {
+  //   padding-top: 210px;
+  // }
+
+  // &.isActive {
+  //   transform: translateY(0);
+  //   opacity: 1;
+  //   height: auto;
+  //   overflow: auto;
+  // }
+}
+
+.other-page {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background-color: #1F282C;
+  padding-top: 180px;
+  width: 100%;
+  transform: translateY(100vh);
+  animation: 0.5s slideUp cubic-bezier(0.68, -0.55, 0.265, 1);
+  animation-fill-mode: forwards;
+
+  @media screen and (max-width: $break-small) {
+    padding-top: 210px;
+  }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100vh) }
+  100% { transform: translateY(0) }
 }

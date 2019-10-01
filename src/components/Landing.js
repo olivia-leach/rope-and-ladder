@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Email from "./Email";
 import "../styles/Landing.scss";
 import Hero from '../album-sm-2.png'
-import Logo from '../logo.png'
-import ComingSoon from '../comingsoon.png'
+import ComingSoon from '../comingsoon_fall.png'
 
 class Landing extends Component {
     render() {
@@ -11,9 +10,6 @@ class Landing extends Component {
             <Fragment>
                 <div className='container main-body'>
                     <div className='landing-container'>
-                        <div className='flex flex-center'>
-                            <img src={Logo} className='logo' />
-                        </div>
                         <div className='flex flex-center'>
                             <img src={ComingSoon} className='coming-soon' />
                         </div>
