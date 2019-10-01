@@ -24,7 +24,7 @@ class App extends Component {
           <div className='other-pages-container'>
             <Switch>
               <Route path="/" exact component={Landing} />
-              <Route path="/store" exact component={Store} />
+              {/*<Route path="/store" exact component={Store} />*/}
               <Route path="*" component={NotFound} />
               {/*<Route render={() => <Redirect to="/" />} />*/}
             </Switch>

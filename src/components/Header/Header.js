@@ -36,14 +36,12 @@ class Header extends Component {
           </div>*/}
             <header className="main-header">
             <div className="container">
-              <nav className="main-menu">
+              {/*<nav className="main-menu">
                 <ul>
                   <li><NavLink to="/" exact activeClassName='isActive'>Home</NavLink></li>
-                  {/*<li><Link to="/tour">Tour</Link></li>*/}
                   <li><NavLink to="/store" activeClassName='isActive'>Store</NavLink></li>
-                  {/*<li><Link to="/contact">Contact</Link></li>*/}
                 </ul>
-              </nav>
+              </nav>*/}
               <nav className="social-menu">
                 <SocialIcons />
               </nav>
