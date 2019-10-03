@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 import Landing from './components/Landing'
 import Store from './components/Store/Store'
 import Contact from './components/Contact'
-import Tour from "./components/Tour";
+import About from "./components/About/About";
 import NotFound from "./components/NotFound";
 import './App.scss';
 
@@ -25,6 +25,7 @@ class App extends Component {
             <Switch>
               <Route path="/" exact component={Landing} />
               {/*<Route path="/store" exact component={Store} />*/}
+              <Route path="/about" exact component={About} />
               <Route path="*" component={NotFound} />
               {/*<Route render={() => <Redirect to="/" />} />*/}
             </Switch>

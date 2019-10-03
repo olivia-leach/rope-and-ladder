@@ -1,0 +1,32 @@
+$break-mobile: 500px;
+$break-small: 767px;
+$break-medium: 1000px;
+
+.about-header {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.about-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    padding: 3rem;
+
+    @media screen and (max-width: $break-medium) {
+        padding: 2rem 3rem 0;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 2rem 3rem 0;
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
