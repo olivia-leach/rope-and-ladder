@@ -21,7 +21,7 @@ class Store extends Component {
         { label: 'Booklet', link: 'https://ropeandladder.bandcamp.com/merch/booklet', price: 10, image: booklet2, hoveredImage: booklet },
         { label: 'Vinyl/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/vinyl-tee-bundle', price: 40, image: vinyltee, hoveredImage: null },
         { label: 'Booklet/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/booklet-tee-bundle', price: 30, image: booklettee, hoveredImage: null },
-        { label: 'Digital Preorder', link: 'https://ropeandladder.bandcamp.com/merch', price: 10, image: digital, hoveredImage: null },
+        { label: 'Digital Preorder', link: 'https://ropeandladder.bandcamp.com/album/rope-and-ladder-2', price: 10, image: digital, hoveredImage: null },
       ]
     }
   }
