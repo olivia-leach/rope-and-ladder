@@ -22,7 +22,7 @@ class Header extends Component {
     render() {
         return (
           <Fragment>
-          {/*<div className='vertical-nav'>
+          <div className='vertical-nav'>
             <button onClick={this.toggleNav} className={`menu-button ${this.state.showNav ? 'hide' : ''}`}>
               {this.state.showNav ? <i className='fa fa-times' /> : <i className='fa fa-bars' />}
             </button>
@@ -30,10 +30,13 @@ class Header extends Component {
               <button onClick={this.toggleNav} className='menu-button'>
                 {this.state.showNav ? <i className='fa fa-times' /> : <i className='fa fa-bars' />}
               </button>
-              <div className='nav-item'><Link to='/' onClick={this.toggleNav}>Home</Link></div>
-              <div className='nav-item'><Link to='/store' onClick={this.toggleNav}>Store</Link></div>
+              <div className='vertical-nav-links'>
+                <div className='nav-item'><Link to='/' onClick={this.toggleNav}>Home</Link></div>
+                <div className='nav-item'><Link to='/about' onClick={this.toggleNav}>About</Link></div>
+                <div className='nav-item'><Link to='/store' onClick={this.toggleNav}>Store</Link></div>
+              </div>
             </div>
-          </div>*/}
+          </div>
             <header className="main-header">
             <div className="container">
               <nav className="main-menu">

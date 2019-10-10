@@ -64,6 +64,9 @@ html, body {
   @media screen and (max-width: $break-small) {
     padding-top: 220px;
   }
+  @media screen and (max-width: $break-mobile) {
+    padding-top: 170px;
+  }
 }
 
 $orange: rgb(221, 125, 69);
@@ -255,6 +258,11 @@ $orange: rgb(221, 125, 69);
 
   @media screen and (max-width: $break-small) {
     padding-top: 210px;
+    min-height: calc(100% - 210px);
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    padding-top: 180px;
     min-height: calc(100% - 210px);
   }
 }
