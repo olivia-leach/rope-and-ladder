@@ -40,7 +40,7 @@ class Header extends Component {
                 <ul>
                   <li><NavLink to="/" exact activeClassName='isActive'>Home</NavLink></li>
                   <li><NavLink to="/about" activeClassName='isActive'>About</NavLink></li>
-                  {/*<li><NavLink to="/store" activeClassName='isActive'>Store</NavLink></li>*/}
+                  <li><NavLink to="/store" activeClassName='isActive'>Store</NavLink></li>
                 </ul>
               </nav>
               <nav className="social-menu">
