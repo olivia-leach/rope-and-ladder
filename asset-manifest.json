@@ -1,14 +1,14 @@
 {
   "main.css": "/static/css/main.bd39d186.chunk.css",
-  "main.js": "/static/js/main.3aef418d.chunk.js",
-  "main.js.map": "/static/js/main.3aef418d.chunk.js.map",
+  "main.js": "/static/js/main.112128c6.chunk.js",
+  "main.js.map": "/static/js/main.112128c6.chunk.js.map",
   "static/js/1.5c464f20.chunk.js": "/static/js/1.5c464f20.chunk.js",
   "static/js/1.5c464f20.chunk.js.map": "/static/js/1.5c464f20.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/logo.png": "/static/media/logo.94a78306.png",
   "static/media/album-sm-2.png": "/static/media/album-sm-2.e4028d79.png",
-  "static/media/comingsoon_fall.png": "/static/media/comingsoon_fall.b22c800c.png",
+  "static/media/comingsoon_winter.png": "/static/media/comingsoon_winter.94302171.png",
   "static/media/store-album-3.jpg": "/static/media/store-album-3.fede4c0e.jpg",
   "static/media/store-album-2.jpg": "/static/media/store-album-2.1ca90dea.jpg",
   "static/media/store-booklet-1.jpg": "/static/media/store-booklet-1.dee6c59e.jpg",
@@ -20,6 +20,6 @@
   "static/media/App.scss": "/static/media/background-sm.e22c44b7.png",
   "static/css/main.bd39d186.chunk.css.map": "/static/css/main.bd39d186.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.edb8efac8f100071194407ca80061a23.js": "/precache-manifest.edb8efac8f100071194407ca80061a23.js",
+  "precache-manifest.7236ae19da0a628296c9c9df867b6035.js": "/precache-manifest.7236ae19da0a628296c9c9df867b6035.js",
   "service-worker.js": "/service-worker.js"
 }
