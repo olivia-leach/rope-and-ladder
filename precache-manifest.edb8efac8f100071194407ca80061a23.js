@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "565e9a24b626292b391e",
+    "revision": "3aef418dd98707647a8d",
     "url": "/static/css/main.bd39d186.chunk.css"
   },
   {
-    "revision": "565e9a24b626292b391e",
-    "url": "/static/js/main.565e9a24.chunk.js"
+    "revision": "3aef418dd98707647a8d",
+    "url": "/static/js/main.3aef418d.chunk.js"
   },
   {
     "revision": "5c464f201e84038e0916",
@@ -52,27 +52,27 @@ self.__precacheManifest = [
     "url": "/static/media/store-vinyl-tee.2f8a83b6.jpg"
   },
   {
-    "revision": "d25156a897b97435b12dfaa36fba4991",
-    "url": "/static/media/store-tee.d25156a8.jpg"
+    "revision": "e12b59fe44a0d71a3d3d3281b1fa2163",
+    "url": "/static/media/store-tee-1.e12b59fe.jpg"
   },
   {
-    "revision": "f3449000f4114eb1bdb8380eff5fae6d",
-    "url": "/static/media/tshirt.f3449000.jpg"
-  },
-  {
-    "revision": "b3be9f4c3241cfc14e54147a5060e839",
-    "url": "/static/media/lines.b3be9f4c.png"
+    "revision": "4a315746e3528cba1a098a0da1fe1fcc",
+    "url": "/static/media/store-tee-2.4a315746.jpg"
   },
   {
     "revision": "480c42345d1db8f866d563e1d1650475",
     "url": "/static/media/stripe.480c4234.png"
   },
   {
+    "revision": "b3be9f4c3241cfc14e54147a5060e839",
+    "url": "/static/media/lines.b3be9f4c.png"
+  },
+  {
     "revision": "e22c44b76429e1af66eb58afd5c2a630",
     "url": "/static/media/background-sm.e22c44b7.png"
   },
   {
-    "revision": "07c5f184f5ac84013364600e9d2d9131",
+    "revision": "20ab14fd362b0d9f592037c68696951a",
     "url": "/index.html"
   }
 ];

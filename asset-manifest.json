@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.bd39d186.chunk.css",
-  "main.js": "/static/js/main.565e9a24.chunk.js",
-  "main.js.map": "/static/js/main.565e9a24.chunk.js.map",
+  "main.js": "/static/js/main.3aef418d.chunk.js",
+  "main.js.map": "/static/js/main.3aef418d.chunk.js.map",
   "static/js/1.5c464f20.chunk.js": "/static/js/1.5c464f20.chunk.js",
   "static/js/1.5c464f20.chunk.js.map": "/static/js/1.5c464f20.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -15,11 +15,11 @@
   "static/media/store-booklet-2.jpg": "/static/media/store-booklet-2.4910a38f.jpg",
   "static/media/store-booklet-tee.jpg": "/static/media/store-booklet-tee.8259fd3b.jpg",
   "static/media/store-vinyl-tee.jpg": "/static/media/store-vinyl-tee.2f8a83b6.jpg",
-  "static/media/store-tee.jpg": "/static/media/store-tee.d25156a8.jpg",
-  "static/media/tshirt.jpg": "/static/media/tshirt.f3449000.jpg",
+  "static/media/store-tee-1.jpg": "/static/media/store-tee-1.e12b59fe.jpg",
+  "static/media/store-tee-2.jpg": "/static/media/store-tee-2.4a315746.jpg",
   "static/media/App.scss": "/static/media/background-sm.e22c44b7.png",
   "static/css/main.bd39d186.chunk.css.map": "/static/css/main.bd39d186.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.8c47e0cf0aad00dec76c7d6894c10b3d.js": "/precache-manifest.8c47e0cf0aad00dec76c7d6894c10b3d.js",
+  "precache-manifest.edb8efac8f100071194407ca80061a23.js": "/precache-manifest.edb8efac8f100071194407ca80061a23.js",
   "service-worker.js": "/service-worker.js"
 }
