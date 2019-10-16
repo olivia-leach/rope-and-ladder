@@ -6,8 +6,8 @@ import booklet2 from '../../store-booklet-2.jpg'
 import booklettee from '../../store-booklet-tee.jpg'
 import vinyltee from '../../store-vinyl-tee.jpg'
 import digital from '../../digital.png'
-import shirt from '../../store-tee.jpg'
-import shirt2 from '../../tshirt.jpg'
+import shirt from '../../store-tee-1.jpg'
+import shirt2 from '../../store-tee-2.jpg'
 import Footer from "../Footer";
 
 import './Store.scss'
@@ -21,7 +21,7 @@ class Store extends Component {
         { label: "T-Shirt", link: 'https://ropeandladder.bandcamp.com/merch/t-shirt', price: 20, image: shirt, hoveredImage: shirt2 },
         { label: 'Booklet', link: 'https://ropeandladder.bandcamp.com/merch/booklet', price: 10, image: booklet2, hoveredImage: booklet },
         { label: 'Vinyl/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/vinyl-tee-bundle', price: 40, image: vinyltee, hoveredImage: null },
-        { label: 'Booklet/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/booklet-tee-bundle', price: 30, image: booklettee, hoveredImage: null },
+        { label: 'Booklet/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/booklet-tee-bundle', price: 27, image: booklettee, hoveredImage: null },
         { label: 'Digital Preorder', link: 'https://ropeandladder.bandcamp.com/album/rope-and-ladder-2', price: 10, image: digital, hoveredImage: null },
       ]
     }
