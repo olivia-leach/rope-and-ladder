@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Email from "./Email";
 import "../styles/Landing.scss";
 import Hero from '../album-sm-2.png'
-import ComingSoon from '../comingsoon_fall.png'
+import ComingSoon from '../comingsoon_winter.png'
 
 class Landing extends Component {
     render() {
