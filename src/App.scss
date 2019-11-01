@@ -195,7 +195,7 @@ $orange: rgb(221, 125, 69);
   margin-top: 1rem;
   li {
     margin: .5rem;
-    img {
+    img, .fab {
       height: 15px;
       transition: .25s ease-in-out all;
     }
@@ -204,6 +204,16 @@ $orange: rgb(221, 125, 69);
         filter: brightness(200%);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
       }
+    }
+  }
+  .youtube .fab {
+    font-size: 17px;
+    opacity: 0.55;
+    display: block;
+    margin-top: -1px;
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
   }
 }

@@ -22,11 +22,11 @@ class SocialIcons extends Component {
                         <img src={Facebook} />
                     </a>
                 </li>
-                {/*<li className="youtube">
-                    <a href="https://www.youtube.com/RopeAndLadder" target="_blank" className="social-icon">
-                        <i className="fab fa-youtube" />
+                <li className="youtube">
+                    <a href="https://www.youtube.com/channel/UChM5AgIbOSZssaG8N9BJ00w" target="_blank" className="social-icon">
+                        <i className="fab fa-youtube-square" />
                     </a>
-                </li>*/}
+                </li>
             </ul>
         );
     }
