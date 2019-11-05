@@ -1,10 +1,25 @@
 import React, { Component, Fragment } from 'react';
+
 import Email from "./Email";
 import "../styles/Landing.scss";
 import Hero from '../album-sm-2.png'
 import ComingSoon from '../jan2020.png'
 
 class Landing extends Component {
+    componentDidMount() {
+        this.checkForRedirect()
+    }
+
+    componentDidUpdate() {
+        this.checkForRedirect()
+    }
+
+    checkForRedirect = () => {
+        if (this.props.location && this.props.location.hash) {
+            this.props.history.push(this.props.location.hash.slice(2))
+        }
+    }
+
     render() {
         return (
             <Fragment>

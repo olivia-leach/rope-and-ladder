@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history"
 
 import Header from './components/Header/Header'
-import Footer from './components/Footer'
 import Landing from './components/Landing'
 import Store from './components/Store/Store'
-import Contact from './components/Contact'
 import About from "./components/About/About";
 import NotFound from "./components/NotFound";
 import './App.scss';
@@ -23,7 +21,7 @@ class App extends Component {
           <Landing />
           <div className='other-pages-container'>
             <Switch>
-              <Route path="/" exact component={Landing} />
+              <Route path="/" exact component={Landing} history={history} />
               <Route path="/store" exact component={Store} />
               <Route path="/about" exact component={About} />
               <Route path="*" component={NotFound} />
