@@ -1,0 +1,33 @@
+$break-small: 767px;
+
+.call-to-action-container {
+    min-height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .input-container {
+        margin-top: 2rem;
+    }
+  }
+
+.call-to-action-instructions {
+    font-size: 0.98rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+    color: #AAAAAA;
+    text-transform: uppercase;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $break-small) {
+        iframe {
+            width: 300px;
+            height: 380px;
+        }
+      }
+}

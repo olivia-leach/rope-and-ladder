@@ -9,8 +9,10 @@ import digital from '../../digital.png'
 import shirt from '../../store-tee-1.jpg'
 import shirt2 from '../../store-tee-2.jpg'
 import Footer from "../Footer";
+import { Element } from 'react-scroll'
 
 import './Store.scss'
+import { Parallax } from "react-scroll-parallax";
 
 class Store extends Component {
   constructor(props) {
@@ -29,10 +31,12 @@ class Store extends Component {
 
   render() {
     return (
-        <div className="store other-page">
+      <Element name='store' className='page-section sub-section store-section'>
+        <div className="store">
+        <div className='store-header'>Store</div>
           <div className='store-wrapper'>
-            {this.state.items.map(item =>
-              <a className='store-item' href={item.link} target='_blank'>
+            {this.state.items.map((item, i) =>
+              <a key={item.label} className='store-item' href={item.link} target='_blank'>
                 <div className='image-wrapper image-1'>
                   <img src={item.image} alt={item.label} />
                   {item.hoveredImage && (<img className='image-2' src={item.hoveredImage} alt={item.label} />)}
@@ -42,8 +46,8 @@ class Store extends Component {
               </a>
             )}
           </div>
-          <Footer />
         </div>
+      </Element>
     );
   }
 }

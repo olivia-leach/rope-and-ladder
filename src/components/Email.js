@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { MDCTextField } from '@material/textfield/index';
 // import { MDCRipple } from '@material'
 import "../styles/Email.scss";
 import Signup from '../signup.png'
 import Footer from './Footer'
+import { Parallax } from 'react-scroll-parallax';
 
 class Email extends Component {
     constructor(props) {
@@ -79,6 +80,8 @@ class Email extends Component {
         const canSubmit = !!this.state.name && emailValid
         return (
         <div className='email-container'>
+            {this.state.submitted || this.state.submitting ? <h1 className='call-to-action-instructions text-center'>Thanks. We'll be in touch soon.</h1> :
+            <Fragment>
             <div className='flex flex-center'>
                 <img className='sign-up' src={Signup} />
             </div>
@@ -102,7 +105,7 @@ class Email extends Component {
                 <div className="mdc-line-ripple" />
                 </div>
             </div>
-            <button className="mdc-button mdc-button--raised" disabled={!canSubmit || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
+            <button className="mdc-button mdc-button--raised subscribe" disabled={!canSubmit || this.state.submitting || this.state.submitted} onClick={this.submitForm}>
                 {this.state.submitting ?
                     <span className="mdc-button__label">Signing up...</span>
                 :
@@ -110,7 +113,7 @@ class Email extends Component {
                     {this.state.submitted ? 'Thank you' : 'Subscribe'}</span>}
             </button>
             </div>
-            <Footer />
+            </Fragment>}
             </div>
         )
     }

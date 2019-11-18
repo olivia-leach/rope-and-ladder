@@ -2,12 +2,21 @@ $break-mobile: 500px;
 $break-small: 767px;
 
 .main-header {
-    position: absolute;
+    // position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
     font-size: .9rem;
+    position: fixed;
+    background-color: transparent;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1) background-color;
+
+    &.is-dark {
+      background-color: #1F282C;
+      padding-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
 }
 
 a {
@@ -61,7 +70,7 @@ li {
             border-radius: 1px;
         }
 
-        &.isActive {
+        &.active {
             opacity: 1;
             pointer-events: none;
             letter-spacing: 4px;
@@ -87,6 +96,10 @@ li {
 
 .main-menu {
     display: inline-block;
+
+    a {
+      cursor: pointer;
+    }
 
     @media screen and (max-width: $break-mobile) {
       display: none;

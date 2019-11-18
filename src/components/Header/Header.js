@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { Link } from 'react-scroll'
+import { Parallax } from 'react-scroll-parallax';
 import SocialIcons from '../SocialIcons';
-import Logo from '../../logo.png'
 
 import './Header.scss'
 
@@ -9,7 +9,8 @@ class Header extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        showNav: false
+        showNav: false,
+        isHeaderDark: false,
       }
     }
 
@@ -19,7 +20,13 @@ class Header extends Component {
       }))
     }
 
+    handleOnSetActive = (route) => {
+      this.setState({ isHeaderDark: route !== 'home'})
+    }
+
     render() {
+      const pages = ['home', 'store', 'about', 'listen']
+
         return (
           <Fragment>
           <div className='vertical-nav'>
@@ -31,35 +38,20 @@ class Header extends Component {
                 {this.state.showNav ? <i className='fa fa-times' /> : <i className='fa fa-bars' />}
               </button>
               <div className='vertical-nav-links'>
-                <div className='nav-item'><Link to='/' onClick={this.toggleNav}>Home</Link></div>
-                <div className='nav-item'><Link to='/about' onClick={this.toggleNav}>About</Link></div>
-                <div className='nav-item'><Link to='/store' onClick={this.toggleNav}>Store</Link></div>
+                {pages.map(page => <div key={page} className='nav-item'><Link to={page} onClick={this.toggleNav}>{page}</Link></div>)}
               </div>
             </div>
           </div>
-            <header className="main-header">
+            <header className={`main-header ${this.state.isHeaderDark ? 'is-dark' : ''} ${window.scrollY}`}>
             <div className="container">
               <nav className="main-menu">
                 <ul>
-                  <li><NavLink to="/" exact activeClassName='isActive'>Home</NavLink></li>
-                  <li><NavLink to="/about" activeClassName='isActive'>About</NavLink></li>
-                  <li><NavLink to="/store" activeClassName='isActive'>Store</NavLink></li>
+                  {pages.map(page => <li key={page}><Link to={page} offset={-90} hashSpy={page !== 'home'} spy onSetActive={this.handleOnSetActive}>{page}</Link></li>)}
                 </ul>
               </nav>
               <nav className="social-menu">
                 <SocialIcons />
               </nav>
-                {/*<div className='logo-container'>
-                    <Link to="/">
-                        <i className="fas fa-crown" />
-                        {/*<img src={logo} alt="Rope and Ladder Logo" />
-                    </Link>
-              </div>*/}
-            </div>
-            <div className='header-logo-container'>
-              <Link to="/">
-                <img src={Logo} className='logo' />
-              </Link>
             </div>
           </header>
           </Fragment>

@@ -10,11 +10,10 @@ $break-medium: 1000px;
 }
 
 .about-wrapper {
-    max-width: 500px;
-    margin: 0 auto;
+    // max-width: 500px;
+    margin: 0 1.3rem;
     line-height: 1.8;
     letter-spacing: 1px;
-    padding: 3rem;
 
     @media screen and (max-width: $break-medium) {
         padding: 2rem 3rem 0;

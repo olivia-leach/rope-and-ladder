@@ -1,28 +1,25 @@
 import React, { Component } from "react";
-import Instagram from '../instagram.png'
-import Twitter from '../twitter.png'
-import Facebook from '../fb.png'
 
 class SocialIcons extends Component {
     render() {
         return (
             <ul className="social-list">
-                <li className="facebook">
+                <li>
                     <a href="https://www.instagram.com/RopeAndLaddermusic/" target="_blank" className="social-icon">
-                        <img src={Instagram} />
+                        <i className='fab fa-instagram' />
                     </a>
                 </li>
-                <li className="instagram">
+                <li>
                     <a href="https://www.twitter.com/Rope_and_Ladder" target="_blank" className="social-icon">
-                        <img src={Twitter} />
+                        <i className='fab fa-twitter' />
                     </a>
                 </li>
-                <li className="twitter">
+                <li>
                     <a href="https://www.facebook.com/RopeAndLadder" target="_blank" className="social-icon">
-                        <img src={Facebook} />
+                        <i className='fab fa-facebook' />
                     </a>
                 </li>
-                <li className="youtube">
+                <li>
                     <a href="https://www.youtube.com/channel/UChM5AgIbOSZssaG8N9BJ00w" target="_blank" className="social-icon">
                         <i className="fab fa-youtube-square" />
                     </a>
