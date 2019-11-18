@@ -28,3 +28,17 @@ $break-medium: 1000px;
     flex-direction: column;
     justify-content: space-between;
 }
+
+.fixed-banner {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+
+    img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        height: 150px;
+    }
+}
