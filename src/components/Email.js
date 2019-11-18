@@ -74,7 +74,7 @@ class Email extends Component {
             <div className='flex flex-center input-container'>
             <div>
                 <div className="mdc-text-field">
-                <input type="text" name='name' id="name-field" className="mdc-text-field__input" valid={!!this.state.name} onChange={this.onTextChange} />
+                <input type="text" name='name' id="name-field" className="mdc-text-field__input" onChange={this.onTextChange} />
                 <label className="mdc-floating-label" htmlFor="name-field">
                     NAME
                 </label>
@@ -83,7 +83,7 @@ class Email extends Component {
             </div>
             <div>
                 <div className="mdc-text-field">
-                <input type="email" name='email' id="email-field" className="mdc-text-field__input" valid={canSubmit} onChange={this.onTextChange} />
+                <input type="email" name='email' id="email-field" className="mdc-text-field__input" onChange={this.onTextChange} />
                 <label className="mdc-floating-label" htmlFor="email-field">
                     EMAIL
                 </label>

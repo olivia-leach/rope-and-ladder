@@ -33,7 +33,7 @@ class Store extends Component {
     return (
       <Element name='store' className='page-section sub-section store-section'>
         <div className="store">
-        <div className='store-header'>Store</div>
+        <div className='section-header store-header'>Store</div>
           <div className='store-wrapper'>
             {this.state.items.map((item, i) =>
               <a key={item.label} className='store-item' href={item.link} target='_blank'>

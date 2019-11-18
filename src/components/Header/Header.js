@@ -1,16 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-scroll'
-import { Parallax } from 'react-scroll-parallax';
 import SocialIcons from '../SocialIcons';
 
 import './Header.scss'
 
+const pages = ['home', 'store', 'about', 'listen']
+
 class Header extends Component {
     constructor(props) {
       super(props)
+      const hash = props.history.location.hash
       this.state = {
         showNav: false,
-        isHeaderDark: false,
+        isHeaderDark: hash && hash.substr(1),
       }
     }
 
@@ -25,8 +27,6 @@ class Header extends Component {
     }
 
     render() {
-      const pages = ['home', 'store', 'about', 'listen']
-
         return (
           <Fragment>
           <div className='vertical-nav'>

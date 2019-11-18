@@ -2,25 +2,10 @@ $break-mobile: 500px;
 $break-small: 767px;
 $break-medium: 1000px;
 
-.about-header {
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
 .about-wrapper {
     margin: 0 1.3rem;
     line-height: 1.8;
     letter-spacing: 1px;
-
-    @media screen and (max-width: $break-medium) {
-        padding: 2rem 3rem 0;
-    }
-
-    @media screen and (max-width: $break-mobile) {
-        padding: 0 3rem 0;
-    }
 }
 
 .about {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, Redirect } from "react-router-dom";
+import { Router, Route, Redirect, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history"
 import { ParallaxProvider } from 'react-scroll-parallax';
 
@@ -19,10 +19,14 @@ class App extends Component {
     return (
       <Router basename='/' history={history}>
         <ParallaxProvider>
-          <div className="App mdc-typography">
-            <Header />
-            <Route path='/' component={Landing} />
-            <Redirect from="*" to='/' />
+          <div className="App mdc-typography" id='AppContainer'>
+            <Switch>
+              <Redirect from="/store" to={{ pathname: '/', hash: '#store' }} />
+              <Redirect from="/about" to={{ pathname: '/', hash: '#about' }} />
+              <Route path='/' exact component={Landing} />
+              <Redirect from="*" to='/' />
+            </Switch>
+            <Header history={history} />
             <div className='sub-pages-container'>
               <Store />
               <About />

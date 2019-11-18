@@ -257,3 +257,14 @@ $orange: rgb(221, 125, 69);
     padding: 3rem 0;
   }
 }
+
+.section-header {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: $break-small) {
+    text-align: center;
+  }
+}

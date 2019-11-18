@@ -5,15 +5,7 @@ $break-medium: 1000px;
 $animation-length: 0.2s;
   
   .store-header {
-    font-size: 22px;
-    letter-spacing: 4px;
-    margin-left: 1.3rem;
-    font-weight: bold;
     margin: 0 1.3rem 1.3rem;
-
-    @media screen and (max-width: $break-small) {
-      text-align: center;
-    }
   }
   
   .store-wrapper {
