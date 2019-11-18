@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { MDCTextField } from '@material/textfield/index';
-// import { MDCRipple } from '@material'
 import "../styles/Email.scss";
 import Signup from '../signup.png'
-import Footer from './Footer'
-import { Parallax } from 'react-scroll-parallax';
 
 class Email extends Component {
     constructor(props) {
@@ -19,38 +16,27 @@ class Email extends Component {
         const { value, name } = e.target
         this.setState({
             [name]: value,
-            // emailValid: value.includes('@') && value.includes('.'),
             submitted: false,
         })
     }
 
     componentDidMount() {
-        // const buttons = document.querySelectorAll('.mdc-button');
-        // for (const button of buttons) {
-        //     MDCRipple.attachTo(button);
-        // }
-
         const textFields = document.querySelectorAll('.mdc-text-field');
         for (const textField of textFields) {
             MDCTextField.attachTo(textField);
         }
     }
 
-     // get all data in form and return object
     getFormData() {
-        // add form-specific values into the data
         const data = { email: this.state.email, name: this.state.name }
         data.formDataNameOrder = JSON.stringify(data);
-        // data.formGoogleSheetName = 'emails' // default sheet name
-
-        // console.log(data);
         return data;
     }
 
     submitForm = (e) => {
         e.preventDefault()
         this.setState({ submitting: true })
-        const data = this.getFormData();         // get the values submitted in the form
+        const data = this.getFormData();
     
         let encoded = Object.keys(data).map(function(k) {
             return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
@@ -85,7 +71,6 @@ class Email extends Component {
             <div className='flex flex-center'>
                 <img className='sign-up' src={Signup} />
             </div>
-            {/*<h1 className="mdc-typography--headline4 text-center">SIGN UP TO RECEIVE ALBUM RELEASE UPDATES</h1>*/}
             <div className='flex flex-center input-container'>
             <div>
                 <div className="mdc-text-field">
