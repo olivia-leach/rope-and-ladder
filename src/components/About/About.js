@@ -1,18 +1,12 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Element } from 'react-scroll'
-import AboutTheBand from '../../about_the_band.png'
 import './About.scss'
-import { Parallax } from "react-scroll-parallax";
 
 class About extends Component {
   render() {
     return (
       <Element name='about'>
-        <div className='fixed-banner'>
-          <Parallax y={[-100, -40]}>
-            <img src={AboutTheBand} alt='band' />
-          </Parallax>
-        </div>
+        <div className='fixed-banner about-the-band' />
         <div className='page-section sub-section'>
           <div className="about">
               <div className='about-wrapper'>
