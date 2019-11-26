@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import "../styles/Landing.scss";
 import Hero from '../album-sm-2.png'
-import ComingSoon from '../jan2020.png'
 import Logo from '../logo.png'
 import { Element } from 'react-scroll';
 import Email from './Email';
@@ -18,8 +17,9 @@ class Landing extends Component {
                     <div className='header-logo-container'>
                     <img src={Logo} className='logo' alt='logo' />
                   </div>
-                        <div className='flex flex-center'>
-                            <img src={ComingSoon} className='coming-soon' />
+                        <div className='coming-soon-container'>
+                            <div className='coming-soon-text'>Coming Soon</div>
+                            <div className='coming-soon-date'>Album Release Early 2020</div>
                         </div>
                         <div className='flex flex-center'>
                             <Parallax y={[20, -20]} className='album-art-container'>
