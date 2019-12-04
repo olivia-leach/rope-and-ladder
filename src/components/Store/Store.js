@@ -1,31 +1,54 @@
-import React, { Component } from "react";
-import vinyl from '../../store-album-3.jpg'
-import vinyl2 from '../../store-album-2.jpg'
-import booklet from '../../store-booklet-1.jpg'
-import booklet2 from '../../store-booklet-2.jpg'
-import booklettee from '../../store-booklet-tee.jpg'
-import vinyltee from '../../store-vinyl-tee.jpg'
-import digital from '../../digital.png'
-import shirt from '../../store-tee-1.jpg'
-import shirt2 from '../../store-tee-2.jpg'
-import Footer from "../Footer";
+import React, { Component } from "react"
 import { Element } from 'react-scroll'
+import ShopifySettings from './ShopifySettings'
+// import Digital from '../../digital.png'
 
 import './Store.scss'
-import { Parallax } from "react-scroll-parallax";
 
 class Store extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      items: [
-        { label: 'Vinyl LP', link: 'https://ropeandladder.bandcamp.com/merch', price: 30, image: vinyl, hoveredImage: vinyl2 },
-        { label: "T-Shirt", link: 'https://ropeandladder.bandcamp.com/merch/t-shirt', price: 20, image: shirt, hoveredImage: shirt2 },
-        { label: 'Booklet', link: 'https://ropeandladder.bandcamp.com/merch/booklet', price: 10, image: booklet2, hoveredImage: booklet },
-        { label: 'Vinyl/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/vinyl-tee-bundle', price: 40, image: vinyltee, hoveredImage: null },
-        { label: 'Booklet/Tee Bundle', link: 'https://ropeandladder.bandcamp.com/merch/booklet-tee-bundle', price: 27, image: booklettee, hoveredImage: null },
-        { label: 'Digital Preorder', link: 'https://ropeandladder.bandcamp.com/album/rope-and-ladder-2', price: 10, image: digital, hoveredImage: null },
-      ]
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     shopifyLoaded: false,
+  //   }
+  // }
+
+  componentDidMount() {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    // let that = this
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+
+    function ShopifyBuyInit() {
+      var client = window.ShopifyBuy.buildClient({
+        domain: 'rope-and-ladder.myshopify.com',
+        storefrontAccessToken: '522a179f33ef10f2aa670e674588fa45',
+      });
+
+      window.ShopifyBuy.UI.onReady(client).then(ui => {
+        // that.setState({ shopifyLoaded: true })
+        ui.createComponent('collection', ({
+          id: '157015900234',
+          node: document.getElementById('collection-component-1575338007576'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: ShopifySettings,
+        }))
+      })
     }
   }
 
@@ -35,16 +58,24 @@ class Store extends Component {
         <div className="store">
         <div className='section-header store-header'>Store</div>
           <div className='store-wrapper'>
-            {this.state.items.map((item, i) =>
-              <a key={item.label} className='store-item' href={item.link} target='_blank'>
-                <div className='image-wrapper image-1'>
-                  <img src={item.image} alt={item.label} />
-                  {item.hoveredImage && (<img className='image-2' src={item.hoveredImage} alt={item.label} />)}
+            <div id='collection-component-1575338007576'>
+            </div>
+            {/*<div className="has-image shopify-buy__layout-vertical shopify-buy__product store-add-on">
+              <div tabindex="0" role="button" aria-label="View details" className="shopify-buy__btn--parent">
+                <div className="shopify-buy__product-img-wrapper" data-element="product.imgWrapper">
+                  <img alt="Digital Preorder" data-element="product.img" className="shopify-buy__product__variant-img" src={Digital} />
                 </div>
-                <div className='title'>{item.label}</div>
-                <div className='price'>${item.price.toFixed(2)}</div>
-              </a>
-            )}
+                <h1 className="shopify-buy__product__title" data-element="product.title">
+                  Digital Preorder
+                </h1>
+                <div className="shopify-buy__product__price" data-element="product.prices">
+                  <span className="shopify-buy__product__actual-price " data-element="product.price">$10.00</span>
+                </div>
+              </div>
+            </div>*/}
+            {/*!this.state.shopifyLoaded && (
+              <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            )*/}
           </div>
         </div>
       </Element>
