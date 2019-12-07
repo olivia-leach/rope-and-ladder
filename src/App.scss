@@ -4,6 +4,11 @@ $break-medium: 1000px;
 
 html, body {
   background-color: #2B383D;
+
+  &.isFixed {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 .App {
