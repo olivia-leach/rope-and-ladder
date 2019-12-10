@@ -1,9 +1,10 @@
 export default {
     "product": {
-        DOMEvents: {
-            'click div': (event, target) => {
-                debugger
-            }
+        events: {
+            openModal: (product) => {
+                const productName = product.selectedVariant.sku
+                window.fbq('track', 'ViewContent', { content_name: productName })
+            },
         },
         "styles": {
             "product": {
@@ -73,6 +74,12 @@ export default {
                 "button": false,
                 "buttonWithQuantity": true,
             },
+            events: {
+                addVariantToCart: (product) => {
+                    const productName = product.selectedVariant.sku
+                    window.fbq('track', 'AddToCart', { content_name: productName })
+                 },
+            },
             "styles": {
                 "product": {
                     "@media (min-width: 601px)": {
@@ -119,30 +126,35 @@ export default {
             }
         },
         "cart": {
-        "styles": {
-            "button": {
-            "font-family": "Roboto, sans-serif",
-            "font-weight": "bold",
-            "font-size": "13px",
-            "padding-top": "14.5px",
-            "padding-bottom": "14.5px",
-            ":hover": {
-                "background-color": "#c7713e"
+            events: {
+                openCheckout: () => {
+                    window.fbq('track', 'InitiateCheckout')
+                }
             },
-            "background-color": "#dd7d45",
-            ":focus": {
-                "background-color": "#c7713e"
+            "styles": {
+                "button": {
+                "font-family": "Roboto, sans-serif",
+                "font-weight": "bold",
+                "font-size": "13px",
+                "padding-top": "14.5px",
+                "padding-bottom": "14.5px",
+                ":hover": {
+                    "background-color": "#c7713e"
+                },
+                "background-color": "#dd7d45",
+                ":focus": {
+                    "background-color": "#c7713e"
+                },
+                "border-radius": "6px"
+                }
             },
-            "border-radius": "6px"
-            }
-        },
-        "text": {
-            "total": "Subtotal",
-            "button": "Checkout"
-        },
-        "googleFonts": [
-            "Roboto"
-        ]
+            "text": {
+                "total": "Subtotal",
+                "button": "Checkout"
+            },
+            "googleFonts": [
+                "Roboto"
+            ]
         },
         "toggle": {
         "styles": {
