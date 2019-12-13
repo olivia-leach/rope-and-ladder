@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { MDCTextField } from '@material/textfield/index';
 
-import './Email/Email.scss'
+import './Email.scss'
 
 class Email extends Component {
     constructor(props) {
@@ -82,8 +82,8 @@ class Email extends Component {
             {this.state.submitted || this.state.submitting ? <h1 className='call-to-action-instructions text-center'>Thanks. We'll be in touch soon.</h1> :
             <Fragment>
                 <div className='sign-up-text'>
-                    <p>SIGN UP TO RECEIVE ALBUM UPDATES</p>
-                    <p>AND TO ACCESS THE FIRST FIVE SONGS ON THE RECORD</p>
+                    <p>SIGN UP FOR ALBUM UPDATES</p>
+                    <p>AND ACCESS THE FIRST FIVE SONGS</p>
                 </div>
                 <div id="mc_embed_signup">
                     <form action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca" target="_blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="flex flex-center input-container" novalidate>

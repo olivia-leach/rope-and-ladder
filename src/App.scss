@@ -58,6 +58,11 @@ html, body {
   align-items: center;
   flex-direction: column;
   flex-grow: 1;
+  padding-top: 1rem;
+
+  @media screen and (max-width: $break-small) {
+    padding-top: 4rem;
+  }
 }
 
 $orange: rgb(221, 125, 69);
@@ -102,16 +107,6 @@ $orange: rgb(221, 125, 69);
 
 .sub-pages-container {
   background-color: #28353A;
-}
-
-.email-container {
-  margin-top: -30px;
-  // background-color: #28353A;
-  padding: 1rem;
-  width: calc(100% - 2rem);
-  flex-grow: 1;
-  position: relative;
-  // min-height: 113px;
 }
 
 .sign-up {
@@ -178,7 +173,7 @@ $orange: rgb(221, 125, 69);
   }
 
   .email-container {
-    margin-top: -180px;
+    margin-top: -50px;
   }
 }
 
