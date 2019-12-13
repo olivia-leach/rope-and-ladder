@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import "../../styles/Email.scss";
+import { Element } from 'react-scroll';
 
 import './CallToAction.scss'
-import Footer from '../Footer';
-import { Element } from 'react-scroll';
 
 class CallToAction extends Component {
     render() {

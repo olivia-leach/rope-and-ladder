@@ -52,8 +52,10 @@ function EarlyAccess(props) {
                         <div>
                             <h2>Thanks for signing up.</h2>
                             <p>Enjoy your early access.</p>
-                            <p>Cornish rex ocelot tomcat cougar. Tom donskoy. Jaguar puma siamese but bombay. Cougar devonshire rex lion. Singapura tom lion. Abyssinian . Ragdoll havana brown but siamese and ragdoll. Persian leopard kitten. Ragdoll tabby sphynx for ocicat malkin american bobtail american shorthair. Maine coon bombay, for thai tiger so grimalkin havana brown so balinese . Ocicat persian kitten and sphynx. Ragdoll leopard.</p>
-                            <p>Leopard. Cougar malkin yet mouser but singapura. Tomcat scottish fold siberian. Norwegian forest. Malkin savannah sphynx cornish rex persian or ocicat turkish angora. Cornish rex egyptian mau or siamese and ocelot. Burmese maine coon so russian blue bombay kitty so panther yet devonshire rex.</p>
+                            <p>So far, we've released two singles, but — This project was never meant to be listened to one single at a time. It's a concept album: The songs tell a cohesive story in chronological order.</p>
+                            <p>The first four songs of the record make up the prologue - A little bit of storytelling that happens a few years before tracks 5-13.</p>
+                            <p>We'd love for you to set aside some time and approach it as you would film or theatre. Let your imagination fill out the scenes, and start getting to know the characters.</p>
+                            <p>Let us know what you think! Shoot us a message - we're always excited to chat.</p>
                             <h4>Love,<br/>Rope and Ladder</h4>
                         </div>
                     )}
@@ -68,8 +70,10 @@ function EarlyAccess(props) {
                         <iframe
                             // style={{ border: 0, width: '350px', height: '786px' }}
                             style={{ border: 0, width: '400px', height: '472px' }}
-                            src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/"
+                            // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/tracks=2496975933,1440423378,1973265551,91971970,437267700"
                             // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2496975933,1440423378,1973265551,91971970,437267700"
+                            // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2496975933,1440423378,1973265551,91971970,437267700/esig=a1560812820944b3236fd301b66c580a"
+                            src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=none/transparent=true"
                             seamless
                             title='bandcamp'
                             onLoad={setLoadingFalse}
