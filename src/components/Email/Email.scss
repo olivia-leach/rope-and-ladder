@@ -1,0 +1,27 @@
+$date-letter-spacing: 3px;
+
+.sign-up-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-top: 3px;
+    letter-spacing: $date-letter-spacing;
+    margin-left: $date-letter-spacing;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.email-container {
+    margin-top: -50px;
+    padding: 1rem;
+    flex-grow: 1;
+    position: relative;
+    font-family: 'arial';
+    
+    .input-container {
+        flex-wrap: wrap;
+        div {
+            max-width: 190px;
+        }
+    }
+  }

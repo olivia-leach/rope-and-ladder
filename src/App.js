@@ -6,6 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import Header from './components/Header/Header'
 import Landing from './components/Landing'
 import Footer from './components/Footer';
+import EarlyAccess from './components/EarlyAccess/EarlyAccess';
 
 import './App.scss';
 import About from './components/About/About';
@@ -23,9 +24,10 @@ class App extends Component {
             <Switch>
               <Redirect from="/store" to={{ pathname: '/', hash: '#store' }} />
               <Redirect from="/about" to={{ pathname: '/', hash: '#about' }} />
-              <Route path='/' exact component={Landing} />
+              <Route path='/' component={Landing} />
               <Redirect from="*" to='/' />
             </Switch>
+            <Route path='/earlyaccess' component={EarlyAccess} history={history} />
             <Header history={history} />
             <div className='sub-pages-container'>
               <Store />
