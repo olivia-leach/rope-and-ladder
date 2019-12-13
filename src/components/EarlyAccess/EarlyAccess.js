@@ -13,7 +13,8 @@ function EarlyAccess(props) {
 
         // check for token
         const urlHasCode = props.location.search.includes('?code=')
-        if (!urlHasCode) {
+        const codeIs10 = props.location.search.length === 16
+        if (!urlHasCode || !codeIs10) {
             setIsValid(false)
             setIsLoading(false)
         }
@@ -21,7 +22,7 @@ function EarlyAccess(props) {
         return function cleanup() {
             document.body.classList.remove('isFixed')
         }
-    })
+    }, [])
 
     const goHome = useCallback(() => {
         props.history.push('/')
