@@ -14,7 +14,7 @@ class Landing extends Component {
                     <div className='lines' />
                     <div className='landing-container'>
                         <Parallax y={[20, -20]} className='album-art-container'>
-                            <img className="landing album-art" src={Hero} />
+                            <img className="landing album-art" src={Hero} alt='Rope and Ladder: A Rock Opera' />
                         </Parallax>
                         <Email />
                     </div>
