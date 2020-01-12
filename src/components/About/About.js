@@ -6,7 +6,7 @@ class About extends Component {
   render() {
     return (
       <Element name='about'>
-        <div className='fixed-banner about-the-band' />
+        <div className='fixed-banner about-the-band' role='img' ariaLabel='band music rock opera rope and ladder' />
         <div className='page-section sub-section'>
           <div className="about">
               <div className='about-wrapper'>
