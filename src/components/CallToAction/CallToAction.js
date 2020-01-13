@@ -10,10 +10,10 @@ class CallToAction extends Component {
         <div className='call-to-action-container'>
             <div className='section-header'>Listen</div>
             <div className='iframe-container'>
-                <iframe src="https://open.spotify.com/embed/track/45q74mP57nDkU7Wjetk3ak" width="400" height="480" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe title='play rope and ladder music' src="https://open.spotify.com/embed/track/45q74mP57nDkU7Wjetk3ak" width="400" height="480" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div className='flex flex-center input-container'>
-                <a className="mdc-button mdc-button--raised" href='https://www.smarturl.it/the-conspiracy' target='_blank'>
+                <a className="mdc-button mdc-button--raised" href='https://www.smarturl.it/the-conspiracy' target='_blank' rel='noopener noreferrer'>
                     <span className="mdc-button__label">stream the conspiracy</span>
                 </a>
             </div>

@@ -76,7 +76,7 @@ class Email extends Component {
 
     render() {
         const emailValid = this.state.EMAIL.includes('@') && this.state.EMAIL.includes('.')
-        const canSubmit = !!this.state.FNAME && !!this.state.LNAME && emailValid
+        const canSubmit = !!this.state.FNAME && !!this.state.LNAME && emailValid && !this.state.b_929e4d360b1bc0291a85bc367_51f155eaca
         return (
         <div className='email-container'>
             {this.state.submitted || this.state.submitting ? <h1 className='call-to-action-instructions text-center'>Thanks. We'll be in touch soon.</h1> :
@@ -86,7 +86,7 @@ class Email extends Component {
                     <p>AND ACCESS THE FIRST FIVE SONGS</p>
                 </div>
                 <div id="mc_embed_signup">
-                    <form action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca" target="_blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="flex flex-center input-container" novalidate>
+                    <form action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca" target="_blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="flex flex-center input-container" noValidate>
                         <div className="mdc-text-field">
                             <input type="text" value={this.state.FNAME} name="FNAME" className="mdc-text-field__input"  id="mce-FNAME" onChange={this.onTextChange} />
                             <label className="mdc-floating-label" htmlFor="mce-FNAME">First Name </label>
@@ -106,7 +106,9 @@ class Email extends Component {
                             <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
                             <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
                         </div>
-                        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true"><input type="text" name="b_929e4d360b1bc0291a85bc367_51f155eaca" tabindex="-1" value="" /></div>
+                        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                            <input type="text" name="b_929e4d360b1bc0291a85bc367_51f155eaca" tabIndex="-1" value={this.state.HONEYPOT} onChange={this.onTextChange} />
+                        </div>
                         <input disabled={!canSubmit} type='submit' value={this.state.submitting ? 'Signing up...' : 'Subscribe'} name="subscribe" id="mc-embedded-subscribe" className="mdc-button mdc-button--raised subscribe" />
                     </form>
                 </div>

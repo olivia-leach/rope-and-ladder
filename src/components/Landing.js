@@ -11,7 +11,7 @@ class Landing extends Component {
         return (
             <Element name='home'>
                 <div className='container main-body page-section'>
-                    <div className='lines' role='img' ariaLabel='band music rock opera rope and ladder' />
+                    <div className='lines' role='img' aria-label='band music rock opera rope and ladder' />
                     <div className='landing-container'>
                         <Parallax y={[20, -20]} className='album-art-container'>
                             <img className="landing album-art" src={Hero} alt='Rope and Ladder: A Rock Opera, band music album art' />
