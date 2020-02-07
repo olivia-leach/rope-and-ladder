@@ -82,8 +82,7 @@ class Email extends Component {
             {this.state.submitted || this.state.submitting ? <h1 className='call-to-action-instructions text-center'>Thanks. We'll be in touch soon.</h1> :
             <Fragment>
                 <div className='sign-up-text'>
-                    <p>SIGN UP FOR ALBUM UPDATES</p>
-                    <p>AND ACCESS THE FIRST FIVE SONGS</p>
+                    <p>SUBSCRIBE TO THE ROPE AND LADDER MAILING LIST</p>
                 </div>
                 <div id="mc_embed_signup">
                     <form action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca" target="_blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="flex flex-center input-container" noValidate>

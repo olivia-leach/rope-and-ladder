@@ -1,6 +1,7 @@
 $break-mobile: 500px;
 $break-small: 767px;
 $break-medium: 1000px;
+$orange: rgb(221, 125, 69);
 
 html, body {
   background-color: #2B383D;
@@ -65,12 +66,10 @@ html, body {
   }
 }
 
-$orange: rgb(221, 125, 69);
-
 .mdc-button--raised {
   background-color: $orange !important;
   color: #fff !important;
-  border-radius: 6px !important;
+  border-radius: 0px !important;
   font-size: .8rem !important;
   letter-spacing: 2px;
 }
@@ -245,7 +244,7 @@ $orange: rgb(221, 125, 69);
   padding: 5rem 0;
 
   &.main-body {
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   &.sub-section {
@@ -307,5 +306,15 @@ $date-letter-spacing: 5px;
       margin-top: 8px;
       font-size: 0.7rem;
     }
+  }
+}
+
+.button-action-container {
+  display: flex;
+  margin-top: -2rem;
+  margin-bottom: 6rem;
+
+  .button-link:first-of-type {
+    margin-right: 10px;
   }
 }
