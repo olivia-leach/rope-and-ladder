@@ -1,6 +1,7 @@
 $break-mobile: 500px;
 $break-small: 767px;
 $break-medium: 1000px;
+$orange: rgb(221, 125, 69);
 
 html, body {
   background-color: #2B383D;
@@ -61,16 +62,14 @@ html, body {
   padding-top: 1rem;
 
   @media screen and (max-width: $break-small) {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 }
-
-$orange: rgb(221, 125, 69);
 
 .mdc-button--raised {
   background-color: $orange !important;
   color: #fff !important;
-  border-radius: 6px !important;
+  border-radius: 0px !important;
   font-size: .8rem !important;
   letter-spacing: 2px;
 }
@@ -245,7 +244,7 @@ $orange: rgb(221, 125, 69);
   padding: 5rem 0;
 
   &.main-body {
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   &.sub-section {
@@ -267,7 +266,7 @@ $orange: rgb(221, 125, 69);
   letter-spacing: 2px;
   font-weight: bold;
   margin-bottom: 2rem;
-
+  margin-top: 2rem;
   @media screen and (max-width: $break-small) {
     text-align: center;
   }
@@ -293,6 +292,7 @@ $date-letter-spacing: 5px;
       font-size: 1.8rem;
       letter-spacing: 8px;
       margin-left: 8px;
+      margin-bottom: 2rem;
     }
   }
 
@@ -308,4 +308,28 @@ $date-letter-spacing: 5px;
       font-size: 0.7rem;
     }
   }
+}
+
+.button-action-container {
+  display: flex;
+  margin-top: -2rem;
+  margin-bottom: 6rem;
+
+  .button-link:first-of-type {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+
+    .button-link:first-of-type {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+}
+
+.dark-section {
+  background-color: #13191D;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }

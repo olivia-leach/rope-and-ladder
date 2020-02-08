@@ -5,9 +5,9 @@ import './About.scss'
 class About extends Component {
   render() {
     return (
-      <Element name='about'>
+      <>
         <div className='fixed-banner about-the-band' role='img' aria-label='band music rock opera rope and ladder' />
-        <div className='page-section sub-section'>
+        <Element className='page-section dark-section' name='about'>
           <div className="about">
               <div className='about-wrapper'>
                   <div className='section-header'>About the Band</div>
@@ -16,8 +16,8 @@ class About extends Component {
                       <p>The album balances delicate piano melodies and classical string voices against distorted guitars and heavy drums, all of which drives the palpable and building tension that accompanies the rising stakes of the plotline.</p>
               </div>
           </div>
-        </div>
-      </Element>
+        </Element>
+      </>
     );
   }
 }

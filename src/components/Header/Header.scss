@@ -87,7 +87,7 @@ li {
     float: right;
     margin-right: 10%;
 
-    @media screen and (max-width: $break-mobile) {
+    @media screen and (max-width: $break-small) {
         margin-right: 1rem;
         padding-top: 0;
       }
@@ -100,7 +100,7 @@ li {
       cursor: pointer;
     }
 
-    @media screen and (max-width: $break-mobile) {
+    @media screen and (max-width: $break-small) {
       display: none;
     }
 }
@@ -142,11 +142,10 @@ li {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 50;
     display: none;
     z-index: 200;
 
-    @media screen and (max-width: $break-mobile) {
+    @media screen and (max-width: $break-small) {
       display: block;
     }
   

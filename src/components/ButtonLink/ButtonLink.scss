@@ -1,0 +1,78 @@
+//#d4ba8c
+$orange: rgb(221, 125, 69);
+$buttonColor: $orange;
+
+.button-link {
+  opacity: 1;
+  
+  &:hover {
+    cursor: pointer;
+
+    .button-link__div {
+      color: #fff;
+
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__div {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+    transition-property: 'color';
+    transition-duration: 0.3s;
+    border: 1px solid $buttonColor;
+    color: $buttonColor;
+    padding: 22px;
+    width: 195px;
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    position: relative;
+    text-transform: uppercase;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $buttonColor;
+      transform: scaleX(0);
+      transform-origin: 50%;
+      transition-property: transform;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+    }
+  }
+  
+  &__span {
+    z-index: 1;
+    position: absolute;
+    top: 13px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .9rem;
+  }
+
+  &--filled {
+    .button-link__div {
+      background-color: $buttonColor;
+      color: #fff;
+
+      &:after {
+        background: #fff;
+      }
+    }
+
+    &:hover {
+      .button-link__div {
+        color: $buttonColor;
+      }
+    }
+  }
+}

@@ -30,5 +30,23 @@ $break-small: 767px;
             width: 300px;
             height: 380px;
         }
+
+        flex-direction: column;
+        align-items: center;
       }
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1px 1px 1px 1rem;
+
+    @media screen and (max-width: $break-small) {
+        margin: 1rem 0 0;
+
+        .button-link {
+            margin: 0.4rem 0;
+        }
+    }
 }
