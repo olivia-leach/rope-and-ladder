@@ -3,15 +3,14 @@ $break-small: 767px;
 $break-medium: 1000px;
 
 .about-wrapper {
-    margin: 0 1.3rem;
+    margin: 0 auto;
     line-height: 1.8;
     letter-spacing: 1px;
-}
+    max-width: 600px;
 
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @media screen and (max-width: $break-mobile) {
+        margin: 3rem;
+    }
 }
 
 .fixed-banner {

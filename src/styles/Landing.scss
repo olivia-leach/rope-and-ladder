@@ -3,6 +3,7 @@ $break-small: 767px;
 .album-art.landing {
   width: auto;
   height: 480px;
+  pointer-events: none;
 }
 
 .sign-up {

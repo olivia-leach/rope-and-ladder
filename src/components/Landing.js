@@ -21,8 +21,8 @@ class Landing extends Component {
                             <img className="landing album-art" src={Hero} alt='Rope and Ladder: A Rock Opera, band music album art' />
                         </Parallax>
                         <div className='button-action-container'>
-                            <ButtonLink link="http://found.ee/thrice_store" label='purchase' icon='fa fa-shopping-cart' />
-                            <ButtonLink link="https://ffm.to/palms_pre-save" label='save' icon='fab fa-spotify' />
+                            <ButtonLink suppressNewPage link="/#store" label='purchase' icon='fa fa-shopping-cart' />
+                            <ButtonLink suppressNewPage link="/#listen" label='digital' icon='fab fa-spotify' />
                         </div>
                         <Email />
                     </div>

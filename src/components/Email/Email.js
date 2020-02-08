@@ -78,7 +78,7 @@ class Email extends Component {
         const emailValid = this.state.EMAIL.includes('@') && this.state.EMAIL.includes('.')
         const canSubmit = !!this.state.FNAME && !!this.state.LNAME && emailValid && !this.state.b_929e4d360b1bc0291a85bc367_51f155eaca
         return (
-        <div className='email-container'>
+        <div className='email-container dark-section'>
             {this.state.submitted || this.state.submitting ? <h1 className='call-to-action-instructions text-center'>Thanks. We'll be in touch soon.</h1> :
             <Fragment>
                 <div className='sign-up-text'>

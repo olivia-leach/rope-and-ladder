@@ -2,7 +2,22 @@
 $orange: rgb(221, 125, 69);
 $buttonColor: $orange;
 
-.button-link__div {
+.button-link {
+  opacity: 1;
+  
+  &:hover {
+    cursor: pointer;
+
+    .button-link__div {
+      color: #fff;
+
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__div {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0);
     transition-property: 'color';
     transition-duration: 0.3s;
@@ -34,27 +49,30 @@ $buttonColor: $orange;
     }
   }
   
-  .button-link__span {
+  &__span {
     z-index: 1;
     position: absolute;
-    top: 12px;
+    top: 13px;
     bottom: 0;
     left: 0;
     right: 0;
+    font-size: .9rem;
   }
-  
-  .button-link {
-    opacity: 1;
-  
+
+  &--filled {
+    .button-link__div {
+      background-color: $buttonColor;
+      color: #fff;
+
+      &:after {
+        background: #fff;
+      }
+    }
+
     &:hover {
-      cursor: pointer;
-  
       .button-link__div {
-        color: #fff;
-  
-        &:after {
-          transform: scaleX(1);
-        }
+        color: $buttonColor;
       }
     }
   }
+}

@@ -1,4 +1,5 @@
 $date-letter-spacing: 3px;
+$break-small: 767px;
 
 .sign-up-text {
     text-align: center;
@@ -8,7 +9,7 @@ $date-letter-spacing: 3px;
     margin-left: $date-letter-spacing;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.7);
-    padding: 0 8rem;
+    padding: 0 5rem;
     line-height: 2;
 }
 
@@ -20,16 +21,20 @@ $date-letter-spacing: 3px;
     letter-spacing: $date-letter-spacing * 2;
     font-weight: 200;
     color: rgba(255, 255, 255, 0.7);
+
+    @media screen and (max-width: $break-small) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .email-container {
     margin-top: -50px;
-    padding: 1rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
     flex-grow: 1;
     position: relative;
     font-family: 'arial';
-    background-color: #13191D;
     width: 100%;
     
     .input-container {
