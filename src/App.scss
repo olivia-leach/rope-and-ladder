@@ -1,7 +1,7 @@
 $break-mobile: 500px;
 $break-small: 767px;
 $break-medium: 1000px;
-$orange: #dd7d45;
+$orange: rgb(221, 125, 69);
 
 html, body {
   background-color: #2B383D;
@@ -72,10 +72,6 @@ html, body {
   border-radius: 0px !important;
   font-size: .8rem !important;
   letter-spacing: 2px;
-
-  &:disabled {
-    opacity: .8;
-  }
 }
 
 .subscribe {
@@ -87,11 +83,12 @@ html, body {
 }
 
 .mdc-floating-label--float-above {
+  color: $orange !important;
   opacity: 0;
 }
 
-.mdc-button {
-  margin: 5px;
+.mdc-line-ripple {
+  background-color: $orange !important;
 }
 
 .flex {
@@ -127,23 +124,29 @@ html, body {
   margin-top: 20px;
 }
 
+.input-container {
+  > div, button {
+    margin: 1rem .5rem;
+  }
+}
+
 .mdc-text-field {
   border-radius: 0;
   height: 36px;
   background-color: rgb(171, 171, 171) !important;
   width: 250px;
-  margin: 5px;
 
   .mdc-floating-label {
     color: black !important;
+    font-size: .9rem !important;
   }
 
   input {
-    padding: 0
+    padding: 0 0 0 10px;
   }
 }
 
-@media screen and (max-width: $break-medium) {
+@media screen and (max-width: $break-small) {
   .sign-up {
     height: 10px;
   }
@@ -151,8 +154,14 @@ html, body {
   .input-container {
     flex-direction: column;
 
-      > .mdc-text-field, button {
+      > div, button {
         margin: .4rem;
+      }
+
+      > div, .mdc-text-field, button {
+        @media screen and (max-width: $break-mobile) {
+          width: 100%;
+        }
       }
     }
   }
