@@ -22,11 +22,11 @@ function EarlyAccess(props) {
         return function cleanup() {
             document.body.classList.remove('isFixed')
         }
-    }, [])
+    }, [props.location.search])
 
     const goHome = useCallback(() => {
-        props.history.push('/')
-    }, [])
+      props.history.push('/')
+    }, [props.history])
 
     const stopProp = useCallback((e) => {
         e.stopPropagation()
@@ -34,11 +34,11 @@ function EarlyAccess(props) {
 
     const setLoadingFalse = useCallback(() => {
         setIsLoading(false)
-    })
+    }, [])
 
     const setLoadingTrue = useCallback(() => {
         setIsLoading(true)
-    })
+    }, [])
 
     return (
         <div className='EarlyAccess' onClick={goHome}>
