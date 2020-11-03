@@ -5,8 +5,8 @@ interface IProps {
     icon: string
     label: string
     link: string
-    filled: boolean
-    suppressNewPage: boolean
+    filled?: boolean
+    suppressNewPage?: boolean
 }
 
 const ButtonLink: React.FC<IProps> = ({ icon, label, link, filled, suppressNewPage }) =>

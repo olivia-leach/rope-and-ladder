@@ -1,10 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import "../styles/Tour.scss";
 
-class Tour extends Component {
-    render() {
-        return (
-            <Fragment>
+const Tour = () => (
+            <>
                 <div className="hero tour" />
                 <div className="center-container tour">
                     <h1 className="mdc-typography--headline4">
@@ -14,9 +12,7 @@ class Tour extends Component {
                         Coming soon
                     </h2>
                 </div>
-            </Fragment>
-        );
-    }
-}
+            </>
+        )
 
 export default Tour;

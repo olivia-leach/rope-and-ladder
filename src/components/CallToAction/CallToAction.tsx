@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import { Element } from 'react-scroll';
+import React from 'react'
+import { Element } from 'react-scroll'
 
 import './CallToAction.scss'
-import ButtonLink from '../ButtonLink/ButtonLink';
+import ButtonLink from '../ButtonLink/ButtonLink'
 
-class CallToAction extends Component {
-    render() {
-        return (
+export default () => (
             <Element name='listen' className='page-section'>
                 <div className='call-to-action-container'>
-                    {/*<div className='section-header'>Listen</div>*/}
                     <div className='iframe-container'>
                         <iframe
                             title='play rope and ladder music'
@@ -17,7 +14,7 @@ class CallToAction extends Component {
                             width="400"
                             height="480"
                             frameBorder="0"
-                            allowtransparency="true"
+                            allowTransparency
                             allow="encrypted-media"
                         />
                         <div className='link-container'>
@@ -34,7 +31,3 @@ class CallToAction extends Component {
                 </div>
             </Element>
         )
-    }
-}
-
-export default CallToAction;

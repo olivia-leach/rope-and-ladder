@@ -1,10 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import '../styles/Contact.scss';
 
-class Contact extends Component {
-    render() {
-        return (
-            <Fragment>
+const Contact = () => (
+            <>
             <div className="hero contact" />
             <div className="center-container">
             <div className="flex contact-wrapper">
@@ -34,9 +32,7 @@ class Contact extends Component {
               </div>
             </div>
           </div>
-        </Fragment>
+        </>
         )
-    }
-}
 
 export default Contact;
