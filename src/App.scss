@@ -66,32 +66,8 @@ html, body {
   }
 }
 
-.mdc-button--raised {
-  background-color: $orange !important;
-  color: #fff !important;
-  border-radius: 0px !important;
-  font-size: .8rem !important;
-  letter-spacing: 2px;
-
-  &:disabled {
-    opacity: .8;
-  }
-}
-
 .subscribe {
   width: 150px;
-}
-
-.mdc-button::before, .mdc-button::after {
-  background-color: $orange;
-}
-
-.mdc-floating-label--float-above {
-  opacity: 0;
-}
-
-.mdc-button {
-  margin: 5px;
 }
 
 .flex {
@@ -127,22 +103,6 @@ html, body {
   margin-top: 20px;
 }
 
-.mdc-text-field {
-  border-radius: 0;
-  height: 36px;
-  background-color: rgb(171, 171, 171) !important;
-  width: 250px;
-  margin: 5px;
-
-  .mdc-floating-label {
-    color: black !important;
-  }
-
-  input {
-    padding: 0;
-  }
-}
-
 @media screen and (max-width: $break-medium) {
   .sign-up {
     height: 10px;
@@ -151,7 +111,7 @@ html, body {
   .input-container {
     flex-direction: column;
 
-      > .mdc-text-field, button {
+      > .MuiTextField-root, button {
         margin: .4rem;
       }
     }

@@ -7,18 +7,11 @@
     left: 0;
     z-index: 2147483646;
     background: rgba(0, 0, 0, 0.6);
-    // background: transparent;
-    // transition: background 300ms ease;
-
-    // &.isActive {
-    //     background: rgba(0, 0, 0, 0.6);
-    // }
 
     &__Modal {
         margin: 100px auto 40px auto;
         border-radius: 2px;
         border: 1px solid rgba(0, 0, 0, 0.72);
-        // transform: translateY(-200px);
         max-width: 1000px;
         background: #fff;
         width: calc(100% - 20px);

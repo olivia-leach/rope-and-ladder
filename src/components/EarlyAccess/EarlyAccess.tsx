@@ -35,7 +35,7 @@ const EarlyAccess = (props: IProps) => {
 
     const goHome = useCallback(() => {
      push('/')
-    }, [])
+    }, [push])
 
     const setLoadingFalse = useCallback(() => {
         setIsLoading(false)

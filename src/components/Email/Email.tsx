@@ -53,7 +53,7 @@ const Email = () => {
           }
           return;
       }
-    }, [])
+    }, [email, firstName, lastName])
 
     const emailValid = email.includes('@') && email.includes('.')
     const canSubmit = !!firstName && !!lastName && emailValid && !honeyPot
@@ -67,26 +67,40 @@ const Email = () => {
           </div>
           <form action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca" target="_blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="flex flex-center input-container" noValidate onSubmit={submitForm}>
             <TextField
-              placeholder='First Name'
+              color='secondary'
+              label='First Name'
+              margin='dense'
               onChange={onFirstNameChange}
+              size='small'
               value={firstName}
+              variant='filled'
             />
             <TextField
-              placeholder='Last Name'
+              color='secondary'
+              label='Last Name'
+              margin='dense'
               onChange={onLastNameChange}
+              size='small'
               value={lastName}
+              variant='filled'
             />
             <TextField
-              placeholder='Email Address'
+              color='secondary'
+              label='Email Address'
+              margin='dense'
               onChange={onEmailChange}
+              size='small'
               value={email}
+              variant='filled'
             />
             <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
               <input type="text" name="b_929e4d360b1bc0291a85bc367_51f155eaca" tabIndex={-1} value={honeyPot} onChange={onHoneyPotChange} />
             </div>
             <Button
+              color='secondary'
               disabled={!canSubmit}
               variant='contained'
+              size='large'
               type='submit'
             >
               {isSubmitting ? 'Signing up...' : 'Subscribe'}

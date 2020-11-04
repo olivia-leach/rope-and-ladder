@@ -15,7 +15,7 @@ const Header = () => {
 
   const toggleNav = useCallback(() => {
     setShowNav(!showNav)
-  }, [])
+  }, [showNav])
 
   const handleOnSetActive = useCallback((route: string) => {
     setIsHeaderDark(route !== 'home')

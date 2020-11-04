@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Element } from 'react-scroll'
-import ShopifySettings from './ShopifySettings'
+import { shopifySettings } from './shopifySettings'
 
 import './Store.scss'
 
@@ -25,7 +25,7 @@ function ShopifyBuyInit() {
       id: '157015900234',
       node: document.getElementById('collection-component-1575338007576'),
       moneyFormat: '%24%7B%7Bamount%7D%7D',
-      options: ShopifySettings,
+      options: shopifySettings,
     }))
   })
 }

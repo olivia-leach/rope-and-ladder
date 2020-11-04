@@ -1,4 +1,4 @@
-export default {
+export const shopifySettings = {
     "product": {
         events: {
             openModal: (product: any) => {

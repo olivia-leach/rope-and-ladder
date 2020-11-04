@@ -2,7 +2,7 @@ import React from "react"
 import { Element } from 'react-scroll'
 import './About.scss'
 
-export default () => (
+const About = () => (
   <>
     <div className='fixed-banner about-the-band' role='img' aria-label='band music rock opera rope and ladder' />
     <Element className='page-section dark-section' name='about'>
@@ -17,3 +17,5 @@ export default () => (
     </Element>
   </>
 )
+
+export default About
