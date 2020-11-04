@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Element } from 'react-scroll'
-import { shopifySettings } from './shopifySettings'
+import { shopifySettings } from './ShopifySettings'
 
 import './Store.scss'
 
