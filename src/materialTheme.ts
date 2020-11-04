@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createMuiTheme } from '@material-ui/core'
 
 const palette = {
   primary: {
@@ -26,20 +26,20 @@ const materialThemeObject = {
       root: {
         '&.Mui-focused': {
           color: palette.primary.dark,
-        }
+        },
       },
     },
     MuiButton: {
       root: {
         '&.Mui-disabled.MuiButton-contained': {
           backgroundColor: palette.secondary.main,
-          opacity: 0.8
-        }
+          opacity: 0.8,
+        },
       },
       label: {
-        color: '#fff'
+        color: '#fff',
       },
-    }
+    },
   },
 }
 
