@@ -1,52 +1,52 @@
 $break-small: 767px;
 
 .call-to-action-container {
-    min-height: 62vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 1.3rem;
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1.3rem;
 
-    .input-container {
-        margin-top: 2rem;
-    }
+  .input-container {
+    margin-top: 2rem;
   }
+}
 
 .call-to-action-instructions {
-    font-size: 0.98rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin: 2rem 0;
-    color: #AAAAAA;
-    text-transform: uppercase;
+  font-size: 0.98rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 2rem 0;
+  color: #aaaaaa;
+  text-transform: uppercase;
 }
 
 .iframe-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    @media screen and (max-width: $break-small) {
-        iframe {
-            width: 300px;
-            height: 380px;
-        }
+  @media screen and (max-width: $break-small) {
+    iframe {
+      width: 300px;
+      height: 380px;
+    }
 
-        flex-direction: column;
-        align-items: center;
-      }
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .link-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1px 1px 1px 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1px 1px 1px 1rem;
 
-    @media screen and (max-width: $break-small) {
-        margin: 1rem 0 0;
+  @media screen and (max-width: $break-small) {
+    margin: 1rem 0 0;
 
-        .button-link {
-            margin: 0.4rem 0;
-        }
+    .button-link {
+      margin: 0.4rem 0;
     }
+  }
 }

@@ -1,87 +1,88 @@
 .EarlyAccess {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  z-index: 2147483646;
+  background: rgba(0, 0, 0, 0.6);
+
+  &__Modal {
+    margin: 100px auto 40px auto;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.72);
+    max-width: 1000px;
+    background: #fff;
+    width: calc(100% - 20px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2147483646;
+
+    &__Button {
+      top: -55px;
+      color: #fff;
+      right: 0;
+      z-index: 2147483647;
+      padding: 0 10px;
+      font-weight: 100;
+      font-size: 40px;
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      transition: transform 100ms ease, color 100ms ease,
+        -webkit-transform 100ms ease;
+      cursor: pointer;
+      font-family: 'Lato', Helvetica, Arial, sans-serif;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &__Body {
+      padding: 2em;
+      color: #4c4c4c;
+      display: flex;
+      justify-content: space-between;
+
+      &--isLoading {
+        iframe {
+          opacity: 0;
+        }
+      }
+    }
+
+    iframe {
+      flex-shrink: 0;
+      margin: 0 0 0 4em;
+    }
+  }
+
+  &__LoaderContainer {
     width: 100%;
     height: 100%;
-    position: fixed;
-    overflow-y: scroll;
-    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     left: 0;
-    z-index: 2147483646;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+  }
 
-    &__Modal {
-        margin: 100px auto 40px auto;
-        border-radius: 2px;
-        border: 1px solid rgba(0, 0, 0, 0.72);
-        max-width: 1000px;
-        background: #fff;
-        width: calc(100% - 20px);
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 2147483646;
-
-        &__Button {
-            top: -55px;
-            color: #fff;
-            right: 0;
-            z-index: 2147483647;
-            padding: 0 10px;
-            font-weight: 100;
-            font-size: 40px;
-            position: absolute;
-            background-color: transparent;
-            border: none;
-            transition: transform 100ms ease, color 100ms ease, -webkit-transform 100ms ease;
-            cursor: pointer;
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
-
-        &__Body {
-            padding: 2em;
-            color: #4c4c4c;
-            display: flex;
-            justify-content: space-between;
-
-            &--isLoading {
-                iframe {
-                    opacity: 0;
-                }
-            }
-        }
-
-        iframe {
-            flex-shrink: 0;
-            margin: 0 0 0 4em;
-        }
-    }
-
-    &__LoaderContainer {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-
-    .lds-roller {
-        position: absolute;
-        margin: 0 auto;
-    }
+  .lds-roller {
+    position: absolute;
+    margin: 0 auto;
+  }
 }
 
 .visuallyhidden {
-    border: 0;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

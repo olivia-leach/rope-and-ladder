@@ -4,7 +4,7 @@ $buttonColor: $orange;
 
 .button-link {
   opacity: 1;
-  
+
   &:hover {
     cursor: pointer;
 
@@ -32,9 +32,9 @@ $buttonColor: $orange;
     letter-spacing: 1.5px;
     position: relative;
     text-transform: uppercase;
-  
+
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       bottom: 0;
@@ -48,7 +48,7 @@ $buttonColor: $orange;
       transition-timing-function: ease-out;
     }
   }
-  
+
   &__span {
     z-index: 1;
     position: absolute;
@@ -56,7 +56,7 @@ $buttonColor: $orange;
     bottom: 0;
     left: 0;
     right: 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   &--filled {

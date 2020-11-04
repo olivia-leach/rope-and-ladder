@@ -2,52 +2,52 @@ $date-letter-spacing: 3px;
 $break-small: 767px;
 
 .sign-up-text {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: $date-letter-spacing;
-    margin-left: $date-letter-spacing;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0 5rem;
-    line-height: 2;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: $date-letter-spacing;
+  margin-left: $date-letter-spacing;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 5rem;
+  line-height: 2;
 }
 
 .coming-soon-text {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2rem;
-    margin: 1rem 0;
-    letter-spacing: $date-letter-spacing * 2;
-    font-weight: 200;
-    color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1rem 0;
+  letter-spacing: $date-letter-spacing * 2;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7);
 
-    @media screen and (max-width: $break-small) {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .email-container {
-    margin-top: -50px;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    flex-grow: 1;
-    position: relative;
-    font-family: 'arial';
-    width: 100%;
-    
-    .input-container {
-        flex-wrap: wrap;
-        > div {
-            max-width: 190px;
-            margin-right: 15px;
-        }
-    }
+  margin-top: -50px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  flex-grow: 1;
+  position: relative;
+  font-family: 'arial';
+  width: 100%;
 
-    .MuiButtonBase-root {
-      border-radius: 0;
-      padding-top: 11px;
-      padding-bottom: 11px;
+  .input-container {
+    flex-wrap: wrap;
+    > div {
+      max-width: 190px;
+      margin-right: 15px;
     }
   }
+
+  .MuiButtonBase-root {
+    border-radius: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

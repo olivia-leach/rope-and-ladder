@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react'
 import { TextField, Button } from '@material-ui/core'
 
 import './Email.scss'
@@ -9,28 +9,40 @@ const Email = () => {
   const [lastName, setLastName] = useState('')
   const [honeyPot, setHoneyPot] = useState('')
 
-  const onEmailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }, [])
+  const onEmailChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setEmail(e.target.value)
+    },
+    [],
+  )
 
-  const onFirstNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setFirstName(e.target.value)
-  }, [])
+  const onFirstNameChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFirstName(e.target.value)
+    },
+    [],
+  )
 
-  const onLastNameChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setLastName(e.target.value)
-  }, [])
+  const onLastNameChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setLastName(e.target.value)
+    },
+    [],
+  )
 
-  const onHoneyPotChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setHoneyPot(e.target.value)
-  }, [])
+  const onHoneyPotChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setHoneyPot(e.target.value)
+    },
+    [],
+  )
 
   const emailValid = email.includes('@') && email.includes('.')
   const canSubmit = !!firstName && !!lastName && emailValid && !honeyPot
 
   return (
-    <div className='email-container dark-section'>
-      <div className='sign-up-text'>
+    <div className="email-container dark-section">
+      <div className="sign-up-text">
         <p>SUBSCRIBE TO THE ROPE AND LADDER MAILING LIST</p>
       </div>
       <form
@@ -43,44 +55,53 @@ const Email = () => {
         noValidate
       >
         <TextField
-          color='secondary'
-          label='First Name'
-          margin='dense'
-          name='FNAME'
+          color="secondary"
+          label="First Name"
+          margin="dense"
+          name="FNAME"
           onChange={onFirstNameChange}
-          size='small'
+          size="small"
           value={firstName}
-          variant='filled'
+          variant="filled"
         />
         <TextField
-          color='secondary'
-          label='Last Name'
-          margin='dense'
-          name='LNAME'
+          color="secondary"
+          label="Last Name"
+          margin="dense"
+          name="LNAME"
           onChange={onLastNameChange}
-          size='small'
+          size="small"
           value={lastName}
-          variant='filled'
+          variant="filled"
         />
         <TextField
-          color='secondary'
-          label='Email Address'
-          margin='dense'
-          name='EMAIL'
+          color="secondary"
+          label="Email Address"
+          margin="dense"
+          name="EMAIL"
           onChange={onEmailChange}
-          size='small'
+          size="small"
           value={email}
-          variant='filled'
+          variant="filled"
         />
-        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-          <input type="text" name="b_929e4d360b1bc0291a85bc367_51f155eaca" tabIndex={-1} value={honeyPot} onChange={onHoneyPotChange} />
+        <div
+          style={{ position: 'absolute', left: '-5000px' }}
+          aria-hidden="true"
+        >
+          <input
+            type="text"
+            name="b_929e4d360b1bc0291a85bc367_51f155eaca"
+            tabIndex={-1}
+            value={honeyPot}
+            onChange={onHoneyPotChange}
+          />
         </div>
         <Button
-          color='secondary'
+          color="secondary"
           disabled={!canSubmit}
-          variant='contained'
-          size='large'
-          type='submit'
+          variant="contained"
+          size="large"
+          type="submit"
         >
           Subscribe
         </Button>
