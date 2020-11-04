@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react"
 
-class SocialIcons extends Component {
-    render() {
-        return (
+const SocialIcons = () => (
             <ul className="social-list">
                 <li>
                     <a href="https://www.instagram.com/RopeAndLaddermusic/" target="_blank" rel="noopener noreferrer" className="social-icon">
@@ -25,8 +23,6 @@ class SocialIcons extends Component {
                     </a>
                 </li>
             </ul>
-        );
-    }
-}
+        )
 
 export default SocialIcons;

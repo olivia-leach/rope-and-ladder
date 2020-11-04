@@ -1,0 +1,17 @@
+{
+  'extends': 'stylelint-config-sensible-scss',
+  'rules': {
+    'no-descending-specificity': null,
+    'selector-max-type': null,
+    'selector-no-qualifying-type': null,
+    'declaration-colon-newline-after': null,
+    'scss/percent-placeholder-pattern': null,
+    indentation: null,
+    'selector-combinator-space-before': null,
+    'declaration-no-important': [true, { 'severity' : 'warning'}],
+    'scss/at-extend-no-missing-placeholder': [true, { 'severity' : 'warning'}],
+    'no-duplicate-selectors': [true, { 'severity' : 'warning'}],
+    'color-no-hex': [true, { 'severity' : 'warning'}],
+    'time-min-milliseconds': [200, { 'severity' : 'warning'}],
+  }
+}

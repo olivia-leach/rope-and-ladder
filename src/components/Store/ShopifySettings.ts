@@ -1,9 +1,8 @@
-export default {
+export const shopifySettings = {
     "product": {
         events: {
-            openModal: (product) => {
-                const productName = product.selectedVariant.sku
-                window.fbq('track', 'ViewContent', { content_name: productName })
+            openModal: (product: any) => {
+                (window as any).fbq('track', 'ViewContent', { content_name: product.selectedVariant.sku as string })
             },
         },
         "styles": {
@@ -75,9 +74,8 @@ export default {
                 "buttonWithQuantity": true,
             },
             events: {
-                addVariantToCart: (product) => {
-                    const productName = product.selectedVariant.sku
-                    window.fbq('track', 'AddToCart', { content_name: productName })
+                addVariantToCart: (product: any) => {
+                    (window as any).fbq('track', 'AddToCart', { content_name: product.selectedVariant.sku })
                  },
             },
             "styles": {
@@ -128,7 +126,7 @@ export default {
         "cart": {
             events: {
                 openCheckout: () => {
-                    window.fbq('track', 'InitiateCheckout')
+                    (window as any).fbq('track', 'InitiateCheckout')
                 }
             },
             "styles": {

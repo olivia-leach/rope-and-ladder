@@ -39,12 +39,15 @@ $break-small: 767px;
     
     .input-container {
         flex-wrap: wrap;
-        div {
+        > div {
             max-width: 190px;
-
-            &.clear {
-                margin-left: 0;
-            }
+            margin-right: 15px;
         }
+    }
+
+    .MuiButtonBase-root {
+      border-radius: 0;
+      padding-top: 11px;
+      padding-bottom: 11px;
     }
   }

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Element } from 'react-scroll';
+import { Parallax } from 'react-scroll-parallax'
 
 import "../styles/Landing.scss";
 import Hero from '../album-sm-2.png'
-import { Element } from 'react-scroll';
 import Email from './Email/Email';
-import { Parallax } from 'react-scroll-parallax';
-import ButtonLink from './ButtonLink/ButtonLink.tsx';
+import ButtonLink from './ButtonLink/ButtonLink'
 
-class Landing extends Component {
-    render() {
-        return (
+
+const Landing = () => (
             <Element name='home'>
                 <div className='container main-body page-section'>
                     <div className='lines' role='img' aria-label='band music rock opera rope and ladder' />
@@ -29,7 +28,5 @@ class Landing extends Component {
                 </div>
             </Element>
         )
-    }
-}
 
 export default Landing;

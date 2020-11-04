@@ -1,11 +1,20 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Loader from '../Loader/Loader';
+import { useHistory } from 'react-router'
 
 import './EarlyAccess.scss'
 
-function EarlyAccess(props) {
+interface IProps {
+  location: Location
+  history: History
+}
+
+const stopProp = (e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()
+
+const EarlyAccess = (props: IProps) => {
     const [isValid, setIsValid] = useState(true)
     const [isLoading, setIsLoading] = useState(true)
+    const { push } = useHistory()
     
     useEffect(() => {
         // lock body scroll
@@ -25,12 +34,8 @@ function EarlyAccess(props) {
     }, [props.location.search])
 
     const goHome = useCallback(() => {
-      props.history.push('/')
-    }, [props.history])
-
-    const stopProp = useCallback((e) => {
-        e.stopPropagation()
-    }, [])
+     push('/')
+    }, [push])
 
     const setLoadingFalse = useCallback(() => {
         setIsLoading(false)
@@ -44,7 +49,7 @@ function EarlyAccess(props) {
         <div className='EarlyAccess' onClick={goHome}>
             <div className="EarlyAccess__Modal" onClick={stopProp}>
                 <button className="EarlyAccess__Modal__Button" onClick={goHome}>
-                    <span aria='hidden'>x</span>
+                    <span aria-hidden='true'>x</span>
                     <span className='visuallyhidden'>Close</span>
                 </button>
                 <div className={`EarlyAccess__Modal__Body${isLoading ? '--isLoading' : ''}`}>
@@ -69,11 +74,7 @@ function EarlyAccess(props) {
                     )}
                     {isValid && (
                         <iframe
-                            // style={{ border: 0, width: '350px', height: '786px' }}
                             style={{ border: 0, width: '400px', height: '472px' }}
-                            // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/tracks=2496975933,1440423378,1973265551,91971970,437267700"
-                            // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2496975933,1440423378,1973265551,91971970,437267700"
-                            // src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/tracklist=true/tracks=2496975933,1440423378,1973265551,91971970,437267700/esig=a1560812820944b3236fd301b66c580a"
                             src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=none/transparent=true"
                             seamless
                             title='bandcamp'
