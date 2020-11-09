@@ -1,7 +1,7 @@
 import React from 'react'
 import './ButtonLink.scss'
 
-interface IProps {
+interface IButtonLinkProps {
   icon: string
   label: string
   link: string
@@ -9,7 +9,7 @@ interface IProps {
   suppressNewPage?: boolean
 }
 
-const ButtonLink: React.FC<IProps> = ({
+const ButtonLink: React.FC<IButtonLinkProps> = ({
   icon,
   label,
   link,
@@ -17,6 +17,7 @@ const ButtonLink: React.FC<IProps> = ({
   suppressNewPage,
 }) => (
   <a
+    data-testid='buttonLink'
     href={link}
     target={suppressNewPage ? undefined : '_blank'}
     className={`button-link ${filled ? 'button-link--filled' : ''}`}

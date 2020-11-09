@@ -25,6 +25,7 @@ const Header = () => {
     <>
       <div className="vertical-nav">
         <button
+          data-testid='menuButton'
           onClick={toggleNav}
           className={`menu-button ${showNav ? 'hide' : ''}`}
         >

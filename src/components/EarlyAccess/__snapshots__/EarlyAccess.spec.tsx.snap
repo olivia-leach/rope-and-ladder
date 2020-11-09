@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EarlyAccess should match snapshot if access code is invalid 1`] = `
+<div>
+  <div
+    class="EarlyAccess"
+  >
+    <div
+      class="EarlyAccess__Modal"
+    >
+      <button
+        class="EarlyAccess__Modal__Button"
+        data-testid="closeButton"
+      >
+        <span
+          aria-hidden="true"
+        >
+          x
+        </span>
+        <span
+          class="visuallyhidden"
+        >
+          Close
+        </span>
+      </button>
+      <div
+        class="EarlyAccess__Modal__Body"
+      >
+        <div>
+          <h2>
+            Uh oh, you forgot something.
+          </h2>
+          <p>
+            Sign up on the home page to get your personal early access link.
+          </p>
+          <h4>
+            Love,
+            <br />
+            Rope and Ladder
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EarlyAccess should match snapshot if access code is valid 1`] = `
+<div>
+  <div
+    class="EarlyAccess"
+  >
+    <div
+      class="EarlyAccess__Modal"
+    >
+      <button
+        class="EarlyAccess__Modal__Button"
+        data-testid="closeButton"
+      >
+        <span
+          aria-hidden="true"
+        >
+          x
+        </span>
+        <span
+          class="visuallyhidden"
+        >
+          Close
+        </span>
+      </button>
+      <div
+        class="EarlyAccess__Modal__Body--isLoading"
+      >
+        <div
+          class="EarlyAccess__LoaderContainer"
+        >
+          <div
+            class="lds-roller"
+          >
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>
+        <iframe
+          data-testid="bandCampIFrame"
+          seamless=""
+          src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=none/transparent=true"
+          style="border: 0px; width: 400px; height: 472px;"
+          title="bandcamp"
+        >
+          <a
+            href="http://ropeandladder.bandcamp.com/album/rope-and-ladder-2"
+          >
+            Rope and Ladder by Rope and Ladder
+          </a>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EarlyAccess should match snapshot when iframe loads 1`] = `
+<div>
+  <div
+    class="EarlyAccess"
+  >
+    <div
+      class="EarlyAccess__Modal"
+    >
+      <button
+        class="EarlyAccess__Modal__Button"
+        data-testid="closeButton"
+      >
+        <span
+          aria-hidden="true"
+        >
+          x
+        </span>
+        <span
+          class="visuallyhidden"
+        >
+          Close
+        </span>
+      </button>
+      <div
+        class="EarlyAccess__Modal__Body"
+      >
+        <div>
+          <h2>
+            Thanks for signing up.
+          </h2>
+          <p>
+            Enjoy your early access.
+          </p>
+          <p>
+            So far, we've released two singles, but — This project was never meant to be listened to one single at a time. It's a concept album: The songs tell a cohesive story in chronological order.
+          </p>
+          <p>
+            The first four songs of the record make up the prologue - A little bit of storytelling that happens a few years before tracks 5-13.
+          </p>
+          <p>
+            We'd love for you to set aside some time and approach it as you would film or theatre. Let your imagination fill out the scenes, and start getting to know the characters.
+          </p>
+          <p>
+            Let us know what you think! Shoot us a message - we're always excited to chat.
+          </p>
+          <h4>
+            Love,
+            <br />
+            Rope and Ladder
+          </h4>
+        </div>
+        <iframe
+          data-testid="bandCampIFrame"
+          seamless=""
+          src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=none/transparent=true"
+          style="border: 0px; width: 400px; height: 472px;"
+          title="bandcamp"
+        >
+          <a
+            href="http://ropeandladder.bandcamp.com/album/rope-and-ladder-2"
+          >
+            Rope and Ladder by Rope and Ladder
+          </a>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<div>
+  <div
+    class="vertical-nav"
+  >
+    <button
+      class="menu-button "
+      data-testid="menuButton"
+    >
+      <i
+        class="fa fa-bars"
+      />
+    </button>
+    <div
+      class="nav-open hide"
+    >
+      <button
+        class="menu-button"
+      >
+        <i
+          class="fa fa-bars"
+        />
+      </button>
+      <div
+        class="vertical-nav-links"
+      >
+        <div
+          class="nav-item"
+        >
+          <a>
+            home
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            store
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            about
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            listen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header
+    class="main-header  0"
+  >
+    <div
+      class="container"
+    >
+      <nav
+        class="main-menu"
+      >
+        <ul>
+          <li>
+            <a>
+              home
+            </a>
+          </li>
+          <li>
+            <a>
+              store
+            </a>
+          </li>
+          <li>
+            <a>
+              about
+            </a>
+          </li>
+          <li>
+            <a>
+              listen
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav
+        class="social-menu"
+      >
+        <ul
+          class="social-list"
+        >
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.instagram.com/RopeAndLaddermusic/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-instagram"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.twitter.com/Rope_and_Ladder"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.facebook.com/RopeAndLadder"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-facebook"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.youtube.com/channel/UChM5AgIbOSZssaG8N9BJ00w"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-youtube-square"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header should match snapshot when nav is active 1`] = `
+<div>
+  <div
+    class="vertical-nav"
+  >
+    <button
+      class="menu-button hide"
+      data-testid="menuButton"
+    >
+      <i
+        class="fa fa-times"
+      />
+    </button>
+    <div
+      class="nav-open "
+    >
+      <button
+        class="menu-button"
+      >
+        <i
+          class="fa fa-times"
+        />
+      </button>
+      <div
+        class="vertical-nav-links"
+      >
+        <div
+          class="nav-item"
+        >
+          <a>
+            home
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            store
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            about
+          </a>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <a>
+            listen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header
+    class="main-header  0"
+  >
+    <div
+      class="container"
+    >
+      <nav
+        class="main-menu"
+      >
+        <ul>
+          <li>
+            <a>
+              home
+            </a>
+          </li>
+          <li>
+            <a>
+              store
+            </a>
+          </li>
+          <li>
+            <a>
+              about
+            </a>
+          </li>
+          <li>
+            <a>
+              listen
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav
+        class="social-menu"
+      >
+        <ul
+          class="social-list"
+        >
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.instagram.com/RopeAndLaddermusic/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-instagram"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.twitter.com/Rope_and_Ladder"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.facebook.com/RopeAndLadder"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-facebook"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-icon"
+              href="https://www.youtube.com/channel/UChM5AgIbOSZssaG8N9BJ00w"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i
+                class="fab fa-youtube-square"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+`;

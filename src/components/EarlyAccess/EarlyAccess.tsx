@@ -1,28 +1,24 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Loader from '../Loader/Loader'
-import { useHistory } from 'react-router'
+import { useHistory, useLocation } from 'react-router'
 
 import './EarlyAccess.scss'
 
-interface IProps {
-  location: Location
-  history: History
-}
-
 const stopProp = (e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()
 
-const EarlyAccess = (props: IProps) => {
+const EarlyAccess = () => {
   const [isValid, setIsValid] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
   const { push } = useHistory()
+  const location = useLocation()
 
   useEffect(() => {
     // lock body scroll
     document.body.classList.add('isFixed')
 
     // check for token
-    const urlHasCode = props.location.search.includes('?code=')
-    const codeIs10 = props.location.search.length === 16
+    const urlHasCode = location.search.includes('?code=')
+    const codeIs10 = location.search.length === 16
     if (!urlHasCode || !codeIs10) {
       setIsValid(false)
       setIsLoading(false)
@@ -31,7 +27,7 @@ const EarlyAccess = (props: IProps) => {
     return function cleanup() {
       document.body.classList.remove('isFixed')
     }
-  }, [props.location.search])
+  }, [location.search])
 
   const goHome = useCallback(() => {
     push('/')
@@ -41,14 +37,10 @@ const EarlyAccess = (props: IProps) => {
     setIsLoading(false)
   }, [])
 
-  const setLoadingTrue = useCallback(() => {
-    setIsLoading(true)
-  }, [])
-
   return (
     <div className="EarlyAccess" onClick={goHome}>
       <div className="EarlyAccess__Modal" onClick={stopProp}>
-        <button className="EarlyAccess__Modal__Button" onClick={goHome}>
+        <button className="EarlyAccess__Modal__Button" onClick={goHome} data-testid='closeButton'>
           <span aria-hidden="true">x</span>
           <span className="visuallyhidden">Close</span>
         </button>
@@ -107,12 +99,12 @@ const EarlyAccess = (props: IProps) => {
           )}
           {isValid && (
             <iframe
+              data-testid='bandCampIFrame'
               style={{ border: 0, width: '400px', height: '472px' }}
               src="https://bandcamp.com/EmbeddedPlayer/album=2731032401/size=large/bgcol=ffffff/linkcol=e99708/artwork=none/transparent=true"
               seamless
               title="bandcamp"
               onLoad={setLoadingFalse}
-              onError={setLoadingTrue}
             >
               <a href="http://ropeandladder.bandcamp.com/album/rope-and-ladder-2">
                 Rope and Ladder by Rope and Ladder

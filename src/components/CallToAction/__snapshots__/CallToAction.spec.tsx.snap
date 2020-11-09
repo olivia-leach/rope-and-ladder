@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallToAction should match snapshot 1`] = `
+<div>
+  <div
+    class="page-section"
+    name="listen"
+  >
+    <div
+      class="call-to-action-container"
+    >
+      <div
+        class="iframe-container"
+      >
+        <iframe
+          allow="encrypted-media"
+          frameborder="0"
+          height="480"
+          src="https://open.spotify.com/embed/album/3V6cYBEdgKndJBXxuxqU5o"
+          title="play rope and ladder music"
+          width="400"
+        />
+        <div
+          class="link-container"
+        >
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="/#store"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fa fa-shopping-cart"
+                />
+                 
+                official store
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/spotify"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-spotify"
+                />
+                 
+                spotify
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/youtubemusic"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-youtube-square"
+                />
+                 
+                youtube
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/bandcampbuy"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-bandcamp"
+                />
+                 
+                bandcamp
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/applemusic"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-apple"
+                />
+                 
+                apple music
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/itunes"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-itunes-note"
+                />
+                 
+                itunes
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/az"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-amazon"
+                />
+                 
+                amazon
+              </span>
+            </div>
+          </a>
+          <a
+            class="button-link button-link--filled"
+            data-testid="buttonLink"
+            href="https://www.smarturl.it/rope-and-ladder/googleplay"
+            target="_blank"
+          >
+            <div
+              class="button-link__div"
+            >
+              <span
+                class="button-link__span"
+              >
+                <i
+                  class="fab fa-google-play"
+                />
+                 
+                google play
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -3,6 +3,20 @@ import { TextField, Button } from '@material-ui/core'
 
 import './Email.scss'
 
+const testProperties = {
+  firstName: {
+    'data-testid': 'firstNameInput'
+  },
+  lastName: {
+    'data-testid': 'lastNameInput'
+  },
+  email: {
+    'data-testid': 'emailInput'
+  }
+}
+
+const honeyPotStyles = { position: 'absolute' as const, left: '-5000px' }
+
 const Email = () => {
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
@@ -48,6 +62,7 @@ const Email = () => {
       <form
         action="https://ropeandladder.us4.list-manage.com/subscribe/post?u=929e4d360b1bc0291a85bc367&amp;id=51f155eaca"
         className="flex flex-center input-container"
+        data-testid="emailForm"
         target="_blank"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -56,6 +71,7 @@ const Email = () => {
       >
         <TextField
           color="secondary"
+          inputProps={testProperties.firstName}
           label="First Name"
           margin="dense"
           name="FNAME"
@@ -66,6 +82,7 @@ const Email = () => {
         />
         <TextField
           color="secondary"
+          inputProps={testProperties.lastName}
           label="Last Name"
           margin="dense"
           name="LNAME"
@@ -76,6 +93,7 @@ const Email = () => {
         />
         <TextField
           color="secondary"
+          inputProps={testProperties.email}
           label="Email Address"
           margin="dense"
           name="EMAIL"
@@ -85,10 +103,11 @@ const Email = () => {
           variant="filled"
         />
         <div
-          style={{ position: 'absolute', left: '-5000px' }}
+          style={honeyPotStyles}
           aria-hidden="true"
         >
           <input
+            data-testid='honeyPot'
             type="text"
             name="b_929e4d360b1bc0291a85bc367_51f155eaca"
             tabIndex={-1}
@@ -98,6 +117,7 @@ const Email = () => {
         </div>
         <Button
           color="secondary"
+          data-testid='submitButton'
           disabled={!canSubmit}
           variant="contained"
           size="large"

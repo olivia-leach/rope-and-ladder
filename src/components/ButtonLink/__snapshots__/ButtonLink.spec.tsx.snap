@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLink should match snapshot when filled 1`] = `
+<div>
+  <a
+    class="button-link button-link--filled"
+    data-testid="buttonLink"
+    href="http://muffinfilms.com/"
+    target="_blank"
+  >
+    <div
+      class="button-link__div"
+    >
+      <span
+        class="button-link__span"
+      >
+        <i
+          class="fa fa-shopping-cart"
+        />
+         
+        hi there
+      </span>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`ButtonLink should match snapshot when not filled 1`] = `
+<div>
+  <a
+    class="button-link "
+    data-testid="buttonLink"
+    href="http://muffinfilms.com/"
+    target="_blank"
+  >
+    <div
+      class="button-link__div"
+    >
+      <span
+        class="button-link__span"
+      >
+        <i
+          class="fa fa-shopping-cart"
+        />
+         
+        hi there
+      </span>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`ButtonLink should open links in new tab if suppressNewPage prop is false 1`] = `
+<div>
+  <a
+    class="button-link button-link--filled"
+    data-testid="buttonLink"
+    href="http://muffinfilms.com/"
+    target="_blank"
+  >
+    <div
+      class="button-link__div"
+    >
+      <span
+        class="button-link__span"
+      >
+        <i
+          class="fa fa-shopping-cart"
+        />
+         
+        hi there
+      </span>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`ButtonLink should open links in same tab if suppressNewPage prop is true 1`] = `
+<div>
+  <a
+    class="button-link button-link--filled"
+    data-testid="buttonLink"
+    href="http://muffinfilms.com/"
+  >
+    <div
+      class="button-link__div"
+    >
+      <span
+        class="button-link__span"
+      >
+        <i
+          class="fa fa-shopping-cart"
+        />
+         
+        hi there
+      </span>
+    </div>
+  </a>
+</div>
+`;
