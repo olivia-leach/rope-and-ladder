@@ -47,9 +47,15 @@ const Header = () => {
           <div className="vertical-nav-links">
             {pages.map(page => (
               <div key={page} className="nav-item">
-                <Link to={page} onClick={toggleNav}>
-                  {page}
-                </Link>
+                {location.pathname === '/' ? (
+                  <Link to={page} onClick={toggleNav}>
+                    {page}
+                  </Link>
+                ) : (
+                  <NavHashLink onClick={toggleNav} to={`/#${page}`}>
+                    {page}
+                  </NavHashLink>
+                )}
               </div>
             ))}
           </div>
@@ -79,9 +85,7 @@ const Header = () => {
                   ))
                 : pages.map(page => (
                     <li key={page}>
-                      <NavHashLink key={page} to={`/#${page}`}>
-                        {page}
-                      </NavHashLink>
+                      <NavHashLink to={`/#${page}`}>{page}</NavHashLink>
                     </li>
                   ))}
             </ul>
