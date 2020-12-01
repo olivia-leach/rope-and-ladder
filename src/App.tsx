@@ -14,6 +14,8 @@ import About from './components/About/About'
 import Store from './components/Store/Store'
 import CallToAction from './components/CallToAction/CallToAction'
 import { materialTheme } from './materialTheme'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import ReturnPolicy from './components/ReturnPolicy/index'
 
 const history = createBrowserHistory()
 
@@ -33,21 +35,28 @@ class App extends Component {
                   from="/about"
                   to={{ pathname: '/', hash: '#about' }}
                 />
+                <Route path="/privacy-policy" exact />
+                <Route path="/return-policy" exact />
                 <Route path="/" component={Landing} />
                 <Redirect from="*" to="/" />
               </Switch>
-              <Route
-                path="/earlyaccess"
-                component={EarlyAccess}
-                history={history}
-              />
+              <Route path="/earlyaccess" component={EarlyAccess} />
               <Header />
-              <div className="sub-pages-container">
-                <Store />
-                <About />
-                <CallToAction />
-                <Footer />
-              </div>
+              <Switch>
+                <Route path="/privacy-policy" component={PrivacyPolicy} exact />
+                <Route path="/return-policy" component={ReturnPolicy} exact />
+                <Route
+                  path="/"
+                  component={() => (
+                    <div className="sub-pages-container">
+                      <Store />
+                      <About />
+                      <CallToAction />
+                      <Footer />
+                    </div>
+                  )}
+                />
+              </Switch>
             </div>
           </ThemeProvider>
         </ParallaxProvider>

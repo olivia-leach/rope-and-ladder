@@ -8,7 +8,7 @@ import Email from './Email/Email'
 import ButtonLink from './ButtonLink/ButtonLink'
 
 const Landing = () => (
-  <Element name="home">
+  <Element id="home" name="home">
     <div className="container main-body page-section">
       <div
         className="lines"

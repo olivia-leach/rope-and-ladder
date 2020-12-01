@@ -48,7 +48,11 @@ const Store = () => {
   }, [])
 
   return (
-    <Element name="store" className="page-section sub-section store-section">
+    <Element
+      name="store"
+      id="store"
+      className="page-section sub-section store-section"
+    >
       <div className="store">
         <div className="section-header store-header">Store</div>
         <div className="store-wrapper">

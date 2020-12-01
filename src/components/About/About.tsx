@@ -9,7 +9,7 @@ const About = () => (
       role="img"
       aria-label="band music rock opera rope and ladder"
     />
-    <Element className="page-section dark-section" name="about">
+    <Element className="page-section dark-section" id="about" name="about">
       <div className="about">
         <div className="about-wrapper">
           <div className="section-header">About the Band</div>
