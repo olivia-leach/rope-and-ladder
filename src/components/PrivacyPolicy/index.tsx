@@ -5,7 +5,6 @@ import './PrivacyPolicy.scss'
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    console.log('>>>>here')
     window.scrollTo(0, 0)
   }, [])
 
