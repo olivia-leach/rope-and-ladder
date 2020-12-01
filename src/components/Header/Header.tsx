@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { Link } from 'react-scroll'
-import { useHistory } from 'react-router'
+import { useHistory, useLocation } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link'
 
 import SocialIcons from '../SocialIcons'
 
@@ -9,7 +10,8 @@ import './Header.scss'
 const pages = ['home', 'store', 'about', 'listen']
 
 const Header = () => {
-  const { hash } = useHistory().location
+  const location = useLocation()
+  const { hash } = location
   const [showNav, setShowNav] = useState(false)
   const [isHeaderDark, setIsHeaderDark] = useState(hash?.substr(1) || false)
 
@@ -61,19 +63,27 @@ const Header = () => {
         <div className="container">
           <nav className="main-menu">
             <ul>
-              {pages.map(page => (
-                <li key={page}>
-                  <Link
-                    to={page}
-                    offset={-90}
-                    hashSpy={page !== 'home'}
-                    spy
-                    onSetActive={handleOnSetActive}
-                  >
-                    {page}
-                  </Link>
-                </li>
-              ))}
+              {location.pathname === '/'
+                ? pages.map(page => (
+                    <li key={page}>
+                      <Link
+                        to={page}
+                        offset={-90}
+                        hashSpy={page !== 'home'}
+                        spy
+                        onSetActive={handleOnSetActive}
+                      >
+                        {page}
+                      </Link>
+                    </li>
+                  ))
+                : pages.map(page => (
+                    <li key={page}>
+                      <NavHashLink key={page} to={`/#${page}`}>
+                        {page}
+                      </NavHashLink>
+                    </li>
+                  ))}
             </ul>
           </nav>
           <nav className="social-menu">

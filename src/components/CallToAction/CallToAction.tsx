@@ -5,7 +5,7 @@ import './CallToAction.scss'
 import ButtonLink from '../ButtonLink/ButtonLink'
 
 const CallToAction = () => (
-  <Element name="listen" className="page-section">
+  <Element name="listen" id="listen" className="page-section">
     <div className="call-to-action-container">
       <div className="iframe-container">
         <iframe

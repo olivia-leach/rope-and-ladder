@@ -4,25 +4,21 @@ import { useHistory } from 'react-router'
 
 import './EarlyAccess.scss'
 
-interface IProps {
-  location: Location
-  history: History
-}
-
 const stopProp = (e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()
 
-const EarlyAccess = (props: IProps) => {
+const EarlyAccess = () => {
   const [isValid, setIsValid] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
-  const { push } = useHistory()
+  const { push, location } = useHistory()
 
   useEffect(() => {
     // lock body scroll
     document.body.classList.add('isFixed')
 
     // check for token
-    const urlHasCode = props.location.search.includes('?code=')
-    const codeIs10 = props.location.search.length === 16
+    const urlHasCode = location.search.includes('?code=')
+    debugger
+    const codeIs10 = location.search.length === 16
     if (!urlHasCode || !codeIs10) {
       setIsValid(false)
       setIsLoading(false)
@@ -31,7 +27,7 @@ const EarlyAccess = (props: IProps) => {
     return function cleanup() {
       document.body.classList.remove('isFixed')
     }
-  }, [props.location.search])
+  }, [location.search])
 
   const goHome = useCallback(() => {
     push('/')
